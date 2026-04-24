@@ -1,0 +1,34 @@
+---
+layout: base.njk
+pageTitle: "CCSU LLB Syllabus — All 6 Semesters | Last Minute Law"
+pageDescription: "Complete CCSU LLB 3-Year syllabus for all 6 semesters with paper codes, marks breakdown, optional subjects, and practical training details."
+permalink: "/syllabus/"
+---
+
+<nav class="breadcrumb" aria-label="Breadcrumb"><div class="wrap"><a href="/">Home</a> <span>›</span> <span>Syllabus</span></div></nav>
+
+<section>
+  <header class="section-head"><div class="wrap"><div class="section-head-inner"><div><div class="section-kicker">Curriculum</div><h1 class="section-title">CCSU LLB Syllabus — All 6 Semesters</h1></div><p class="section-deck">LL.B. 3 Year (Six Semester) Course · w.e.f. 2014-15 Session · Ch. Charan Singh University, Meerut</p></div></div></header>
+  <div class="wrap">
+    {%- for semNum, sem in syllabus %}
+    <div class="syllabus-sem" id="sem-{{ semNum }}">
+      <h2 class="serif" style="font-size:24px;margin-bottom:16px;border-bottom:2px solid var(--red);padding-bottom:8px;">{{ sem.name }} <span class="mono" style="font-size:14px;color:var(--ink-40);">· 500 Marks</span></h2>
+      <div class="syllabus-table">
+        {%- for sub in sem.subjects %}
+        <div class="syl-row">
+          <span class="syl-code mono">{{ sub.code }}</span>
+          <span class="syl-name">{{ sub.name }}
+            {%- if sub.optional %} <span class="chip" style="font-size:10px;">Optional</span>{%- endif %}
+            {%- if sub.practical %} <span class="chip chip--green" style="font-size:10px;">Practical</span>{%- endif %}
+          </span>
+          <span class="syl-marks mono">{{ sub.marks }} marks</span>
+        </div>
+        {%- if sub.practicalNote %}
+        <div class="syl-note" style="padding-left:80px;font-size:12px;color:var(--ink-40);margin-bottom:8px;">{{ sub.practicalNote }}</div>
+        {%- endif %}
+        {%- endfor %}
+      </div>
+    </div>
+    {%- endfor %}
+  </div>
+</section>

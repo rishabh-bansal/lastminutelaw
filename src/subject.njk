@@ -1,0 +1,192 @@
+---
+pagination:
+  data: subjects
+  size: 1
+  alias: subjectEntry
+  resolve: values
+permalink: "/{{ subjectEntry.id }}/"
+eleventyComputed:
+  pageTitle: "{{ subjectEntry.name }} ({{ subjectEntry.code }}) — CCSU LLB Semester {{ subjectEntry.semester }} PYQ Analysis | Last Minute Law"
+  pageDescription: "AI-analyzed {{ subjectEntry.name }} previous year papers (2016-2025). {{ subjectEntry.priorities | length }} priority topics with probability scores, golden case laws & scoring strategies for CCSU LLB Sem {{ subjectEntry.semester }}."
+  pageKeywords: "{{ subjectEntry.name }}, {{ subjectEntry.code }}, CCSU LLB, previous year papers, exam analysis, CCS University"
+layout: base.njk
+---
+
+{%- set s = subjectEntry %}
+{%- set maxRepeats = 1 %}
+{%- for p in s.priorities %}
+  {%- if p.repeats > maxRepeats %}{% set maxRepeats = p.repeats %}{% endif %}
+{%- endfor %}
+
+<!-- Breadcrumb -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="wrap">
+    <a href="/">Home</a> <span>›</span>
+    <a href="/#subjects">Semester {{ s.semester }}</a> <span>›</span>
+    <span>{{ s.name }}</span>
+  </div>
+</nav>
+
+<section class="subject-hero">
+  <div class="wrap">
+    <div class="subject-hero-inner">
+      <span class="mono" style="color:var(--red);font-size:14px;">{{ s.code }} · Semester {{ s.semester }}</span>
+      <h1 class="serif" style="font-size:clamp(32px,5vw,56px);line-height:1.0;letter-spacing:-0.02em;margin:8px 0;">{{ s.name }}</h1>
+      <p style="font-size:15px;color:var(--ink-60);max-width:600px;">{{ s.oneLiner }}</p>
+      <div class="sc-pills" style="margin-top:12px;">
+        <span class="sc-pill">{{ s.difficulty }}</span>
+        <span class="sc-pill">{{ s.style }}</span>
+        {%- if s.optional %}<span class="chip">Optional</span>{%- endif %}
+        {%- if s.practical %}<span class="chip chip--green">Practical</span>{%- endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SMART ANALYSIS — Full static HTML for SEO -->
+<section id="analysis">
+  <header class="section-head">
+    <div class="wrap">
+      <div class="section-head-inner">
+        <div>
+          <div class="section-kicker">Smart Analysis</div>
+          <h2 class="section-title">Priority Topics — {{ s.name }}</h2>
+        </div>
+        <p class="section-deck">{{ s.priorities | length }} topics ranked by repeat frequency across {{ s.papersCount }} papers ({{ s.years | first }}–{{ s.years | last }})</p>
+      </div>
+    </div>
+  </header>
+  <div class="wrap">
+    {%- if s.priorities | length > 0 %}
+    <div class="analysis-list">
+      {%- for p in s.priorities | sortByRepeats %}
+      {%- set pct = ((p.repeats / maxRepeats) * 100) | round %}
+      {%- set pred = pct | predictionLabel %}
+      <article class="analysis-item" id="priority-{{ loop.index }}">
+        <div class="ai-rank">
+          <span class="ai-rank-num mono">{{ loop.index }}</span>
+        </div>
+        <div class="ai-body">
+          <h3 class="ai-topic">{{ p.topic }}</h3>
+          <div class="ai-meta">
+            <span class="chip {% if pred == 'HIGH' %}chip--red{% elif pred == 'MEDIUM' %}chip--amber{% else %}chip--plain{% endif %}">{{ pred }} · {{ pct }}%</span>
+            <span class="chip chip--plain">{{ p.repeats }}/{{ p.total }} papers</span>
+            <span class="chip chip--plain" title="Difficulty">{{ p.difficulty | difficultyDots }}</span>
+            {%- if p.secA > 0 %}<span class="chip chip--plain">A×{{ p.secA }}</span>{%- endif %}
+            {%- if p.secB > 0 %}<span class="chip chip--plain">B×{{ p.secB }}</span>{%- endif %}
+            {%- if p.secC > 0 %}<span class="chip chip--plain">C×{{ p.secC }}</span>{%- endif %}
+          </div>
+          <p class="ai-years mono" style="font-size:11px;color:var(--ink-40);">{{ p.years }}</p>
+          {%- if p.tip %}
+          <p class="ai-tip" style="font-size:13px;color:var(--ink-60);margin-top:6px;font-style:italic;">💡 {{ p.tip }}</p>
+          {%- endif %}
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+    {%- else %}
+    <div style="text-align:center;padding:48px 20px;">
+      <p style="font-family:'Instrument Serif',serif;font-size:22px;">No analysis data yet</p>
+      <p style="font-size:13px;color:var(--ink-60);">We don't have previous year papers for this subject yet.</p>
+    </div>
+    {%- endif %}
+  </div>
+</section>
+
+<!-- GOLDEN CASE LAWS — Static HTML -->
+{%- if s.goldenCases | length > 0 %}
+<section id="strategy">
+  <header class="section-head">
+    <div class="wrap">
+      <div class="section-head-inner">
+        <div>
+          <div class="section-kicker">Strategy</div>
+          <h2 class="section-title">Golden Case Laws — {{ s.name }}</h2>
+        </div>
+        <p class="section-deck">Each case covers 3+ priority topics. Memorise these few → answer most questions.</p>
+      </div>
+    </div>
+  </header>
+  <div class="wrap">
+    <div class="golden-list">
+      {%- for g in s.goldenCases %}
+      <article class="golden-item">
+        <h3 class="golden-name serif">{{ g.name }}</h3>
+        <p class="golden-principle">{{ g.principle }}</p>
+        <div class="golden-covers">
+          {%- for c in g.covers %}
+          <span class="chip chip--plain">{{ c.topic }}</span>
+          {%- endfor %}
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<!-- SAFE COMBOS -->
+{%- if s.safeCombos | length > 0 %}
+<section id="combos">
+  <div class="wrap">
+    <h2 class="section-title" style="margin-bottom:20px;">Safe Scoring Combinations</h2>
+    <div class="combo-grid">
+      {%- for combo in s.safeCombos %}
+      <div class="combo-card">
+        <h3 class="combo-label serif">{{ combo.label }}</h3>
+        <ul class="combo-topics">
+          {%- for t in combo.topics %}
+          <li>{{ t }}</li>
+          {%- endfor %}
+        </ul>
+        <span class="combo-score mono">{{ combo.marks }} marks</span>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<!-- PAST PAPERS LIST — Links to individual paper pages -->
+{%- set paperData = papers[s.code] %}
+{%- if paperData %}
+<section id="papers">
+  <header class="section-head">
+    <div class="wrap">
+      <div class="section-head-inner">
+        <div>
+          <div class="section-kicker">Archive</div>
+          <h2 class="section-title">Previous Year Papers — {{ s.name }}</h2>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="wrap">
+    <div class="papers-grid">
+      {%- for year, questions in paperData %}
+      <a href="/{{ s.id }}/{{ year }}/" class="paper-card">
+        <span class="paper-year serif">{{ year }}</span>
+        <span class="paper-count">{{ questions | length }} questions</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<!-- Schema.org for this subject -->
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LearningResource",
+  "name":"{{ s.name }} ({{ s.code }}) — CCSU LLB Previous Year Analysis",
+  "description":"{{ s.oneLiner }}",
+  "url":"{{ site.url }}/{{ s.id }}/",
+  "educationalLevel":"LLB Semester {{ s.semester }}",
+  "inLanguage":"en-IN",
+  "provider":{"@type":"Organization","name":"Last Minute Law","url":"{{ site.url }}"},
+  "audience":{"@type":"EducationalAudience","educationalRole":"student"},
+  "about":{"@type":"Course","name":"{{ s.name }}","courseCode":"{{ s.code }}","provider":{"@type":"EducationalOrganization","name":"CCS University, Meerut"}}
+}
+</script>
+{% endblock %}

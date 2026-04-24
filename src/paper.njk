@@ -1,0 +1,72 @@
+---
+pagination:
+  data: collections.paperPages
+  size: 1
+  alias: paper
+permalink: "/{{ paper.slug }}/{{ paper.year }}/"
+eleventyComputed:
+  pageTitle: "{{ paper.subject.name }} {{ paper.year }} Question Paper — CCSU LLB {{ paper.subject.code }} | Last Minute Law"
+  pageDescription: "{{ paper.subject.name }} ({{ paper.subject.code }}) {{ paper.year }} CCSU LLB previous year question paper. Full questions with section-wise breakdown. Free exam preparation."
+  pageKeywords: "{{ paper.subject.name }} {{ paper.year }}, {{ paper.subject.code }}, CCSU LLB question paper, previous year paper"
+layout: base.njk
+---
+
+<!-- Breadcrumb -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="wrap">
+    <a href="/">Home</a> <span>›</span>
+    <a href="/{{ paper.slug }}/">{{ paper.subject.name }}</a> <span>›</span>
+    <span>{{ paper.year }} Paper</span>
+  </div>
+</nav>
+
+<section class="paper-detail">
+  <div class="wrap">
+    <header style="margin-bottom:32px;">
+      <span class="mono" style="color:var(--red);font-size:14px;">{{ paper.code }} · Semester {{ paper.subject.semester }}</span>
+      <h1 class="serif" style="font-size:clamp(28px,4vw,48px);line-height:1.1;margin:8px 0;">{{ paper.subject.name }} — {{ paper.year }}</h1>
+      <p style="font-size:14px;color:var(--ink-60);">CCSU LLB Previous Year Question Paper · {{ paper.questions | length }} questions</p>
+    </header>
+
+    <article class="paper-content">
+      {%- for q in paper.questions %}
+        {%- if q | startsWith('§') %}
+          <h2 class="paper-section-head">{{ q | replaceAll('§', '') }}</h2>
+        {%- elif q | startsWith('*') %}
+          <p class="paper-instruction"><em>{{ q | replaceAll('*', '') }}</em></p>
+        {%- elif q | startsWith('   ') %}
+          <p class="paper-sub-q" style="padding-left:24px;font-size:14px;color:var(--ink-60);">{{ q | trimStr }}</p>
+        {%- else %}
+          <p class="paper-question">{{ q }}</p>
+        {%- endif %}
+      {%- endfor %}
+    </article>
+
+    <!-- Navigation to other years -->
+    <nav class="paper-nav" style="margin-top:40px;padding-top:24px;border-top:1px solid var(--rule);">
+      <h3 style="font-size:14px;font-weight:600;margin-bottom:12px;">Other Years — {{ paper.subject.name }}</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        {%- set paperData = papers[paper.code] %}
+        {%- for year in paperData %}
+        <a href="/{{ paper.slug }}/{{ year }}/" class="chip {% if year == paper.year %}chip--red{% else %}chip--plain{% endif %}" style="text-decoration:none;">{{ year }}</a>
+        {%- endfor %}
+      </div>
+      <p style="margin-top:16px;"><a href="/{{ paper.slug }}/" style="color:var(--red);font-weight:600;">← Back to {{ paper.subject.name }} Analysis</a></p>
+    </nav>
+  </div>
+</section>
+
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LearningResource",
+  "name":"{{ paper.subject.name }} {{ paper.year }} Question Paper — CCSU LLB",
+  "description":"Full {{ paper.subject.name }} ({{ paper.code }}) {{ paper.year }} CCSU LLB previous year question paper.",
+  "url":"{{ site.url }}/{{ paper.slug }}/{{ paper.year }}/",
+  "datePublished":"{{ paper.year }}-06-01",
+  "educationalLevel":"LLB Semester {{ paper.subject.semester }}",
+  "inLanguage":"en-IN",
+  "learningResourceType":"ExamQuestion",
+  "provider":{"@type":"Organization","name":"Last Minute Law","url":"{{ site.url }}"}
+}
+</script>
+{% endblock %}

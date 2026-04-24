@@ -1,0 +1,2078 @@
+{
+  "company-law": {
+    "id": "company-law",
+    "code": "K-4001",
+    "name": "Company Law",
+    "semester": 4,
+    "oneLiner": "Formation, management & dissolution of companies under Companies Act 2013",
+    "difficulty": "Medium",
+    "style": "Case Law Intensive",
+    "years": [
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "papersCount": 8,
+    "priorities": [
+      {
+        "rank": 1,
+        "topic": "Share Capital — Types, Transfer, Forfeiture, Redemption, Reduction",
+        "repeats": 8,
+        "total": 8,
+        "difficulty": 4,
+        "prediction": "HIGH",
+        "secA": 5,
+        "secB": 4,
+        "secC": 3,
+        "maxMarks": 28,
+        "minAnswer": "5 types of capital (Authorized/Issued/Subscribed/Called-up/Paid-up) + Equity vs Preference + Transfer Sec 56 + Forfeiture + Reduction Sec 66",
+        "overlaps": [
+          "Debentures (#11)"
+        ],
+        "years": "ALL 8 years",
+        "tags": [
+          "Share Capital",
+          "Transfer",
+          "Core"
+        ],
+        "strategy": "ONLY topic appearing every single year (100%). Fragmented across all sections."
+      },
+      {
+        "rank": 2,
+        "topic": "Foss v Harbottle — Majority Rule, Exceptions, Minority Protection",
+        "repeats": 7,
+        "total": 8,
+        "difficulty": 6,
+        "prediction": "HIGH",
+        "secA": 0,
+        "secB": 0,
+        "secC": 7,
+        "maxMarks": 20,
+        "minAnswer": "State rule + 5 exceptions (ultra vires, fraud, personal rights, special majority, just & equitable) + Edwards v Halliwell",
+        "overlaps": [
+          "Corporate Veil (#5)"
+        ],
+        "years": "2016-2019, 2022, 2024, 2025",
+        "tags": [
+          "Majority Rule",
+          "Landmark Case"
+        ],
+        "strategy": "Near-guaranteed Sec C 20-marker (88%). Always asked as exceptions."
+      },
+      {
+        "rank": 3,
+        "topic": "Doctrine of Indoor Management (Turquand Rule)",
+        "repeats": 7,
+        "total": 8,
+        "difficulty": 3,
+        "prediction": "HIGH",
+        "secA": 1,
+        "secB": 3,
+        "secC": 3,
+        "maxMarks": 24,
+        "minAnswer": "Define + Royal British Bank v Turquand facts + principle (outsiders protected) + 5 exceptions + contrast constructive notice",
+        "overlaps": [],
+        "years": "2016-2019, 2022, 2023, 2025",
+        "tags": [
+          "Indoor Management",
+          "Turquand"
+        ],
+        "strategy": "88% probability. Easiest 20-marker — just case + exceptions."
+      },
+      {
+        "rank": 4,
+        "topic": "Kinds of Companies — Private/Public/Govt/OPC/Foreign/Holding",
+        "repeats": 6,
+        "total": 8,
+        "difficulty": 2,
+        "prediction": "HIGH",
+        "secA": 6,
+        "secB": 0,
+        "secC": 1,
+        "maxMarks": 24,
+        "minAnswer": "Define each type with Sec 2 numbers: Private 2(68), Public 2(71), OPC 2(62), Govt 2(45), Foreign 2(42)",
+        "overlaps": [],
+        "years": "2016, 2018, 2019, 2022, 2023, 2024",
+        "tags": [
+          "Types",
+          "Definitions"
+        ],
+        "strategy": "Free Sec A marks (75%). Always definitions."
+      },
+      {
+        "rank": 5,
+        "topic": "Lifting of Corporate Veil — Circumstances, Case Laws",
+        "repeats": 5,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "MEDIUM-HIGH",
+        "secA": 0,
+        "secB": 1,
+        "secC": 4,
+        "maxMarks": 24,
+        "minAnswer": "Define corporate veil + 6 grounds (fraud, tax evasion, agency, improper conduct, enemy character) + Salomon + Gilford Motor + Lee v Lee's",
+        "overlaps": [
+          "Legal Person (#12)"
+        ],
+        "years": "2016, 2018, 2022, 2023, 2024",
+        "tags": [
+          "Corporate Veil",
+          "Landmark Case"
+        ],
+        "strategy": "Skipped 2025 — may return strongly. Always needs case laws."
+      },
+      {
+        "rank": 6,
+        "topic": "MOA — Meaning, Clauses, Contents + Distinguish MOA vs AOA",
+        "repeats": 5,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "MEDIUM-HIGH",
+        "secA": 0,
+        "secB": 3,
+        "secC": 2,
+        "maxMarks": 24,
+        "minAnswer": "Define MOA + 6 clauses (name, office, objects, liability, capital, subscription) + AOA definition + 5-point distinction",
+        "overlaps": [
+          "Ultra Vires (#10)"
+        ],
+        "years": "2016, 2019, 2024, 2025 + indirect",
+        "tags": [
+          "MOA",
+          "AOA",
+          "Formation"
+        ],
+        "strategy": "Often combined as MOA vs AOA distinction question."
+      },
+      {
+        "rank": 7,
+        "topic": "Directors — Position, Powers, Duties, Appointment, Removal, Disqualification",
+        "repeats": 5,
+        "total": 8,
+        "difficulty": 6,
+        "prediction": "MEDIUM-HIGH",
+        "secA": 0,
+        "secB": 2,
+        "secC": 3,
+        "maxMarks": 24,
+        "minAnswer": "Legal position (agent/trustee) + Sec 152 appointment + Sec 169 removal + Sec 166 duties + Sec 164 disqualification",
+        "overlaps": [
+          "Meetings (#9)"
+        ],
+        "years": "2017, 2019, 2022, 2023, 2025",
+        "tags": [
+          "Directors",
+          "Governance"
+        ],
+        "strategy": "Broadest topic — can come as powers OR duties OR appointment OR disqualification."
+      },
+      {
+        "rank": 8,
+        "topic": "Prospectus — Golden Rules, Mis-statement, Civil & Criminal Liability",
+        "repeats": 5,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "MEDIUM",
+        "secA": 2,
+        "secB": 1,
+        "secC": 3,
+        "maxMarks": 24,
+        "minAnswer": "Define Sec 2(70) + golden rules + civil liability Sec 35 + criminal liability Sec 34 + who is liable",
+        "overlaps": [],
+        "years": "2017, 2018, 2019, 2022, 2023",
+        "tags": [
+          "Prospectus",
+          "Liability"
+        ],
+        "strategy": "Cold since 2023 — may return."
+      },
+      {
+        "rank": 9,
+        "topic": "Company Meetings — Kinds (AGM, EGM, Board), Functions",
+        "repeats": 5,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "MEDIUM-HIGH",
+        "secA": 2,
+        "secB": 0,
+        "secC": 3,
+        "maxMarks": 24,
+        "minAnswer": "5 types + AGM provisions Sec 96 + EGM Sec 100 + Board meeting Sec 173",
+        "overlaps": [],
+        "years": "2016, 2017, 2018, 2019, 2025",
+        "tags": [
+          "Meetings",
+          "AGM"
+        ],
+        "strategy": "Returned in 2025 after long gap."
+      },
+      {
+        "rank": 10,
+        "topic": "Ultra Vires Doctrine + Ashbury Railway v Riche",
+        "repeats": 4,
+        "total": 8,
+        "difficulty": 6,
+        "prediction": "MEDIUM",
+        "secA": 0,
+        "secB": 2,
+        "secC": 2,
+        "maxMarks": 24,
+        "minAnswer": "Define + effects (void ab initio) + exceptions + Ashbury Railway case",
+        "overlaps": [
+          "MOA (#6)"
+        ],
+        "years": "2017, 2019, 2023, 2025",
+        "tags": [
+          "Ultra Vires",
+          "Ashbury"
+        ],
+        "strategy": "Appeared in 2025 — active."
+      },
+      {
+        "rank": 11,
+        "topic": "Debentures — Meaning, Kinds, Shareholder vs Debenture Holder",
+        "repeats": 4,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "MEDIUM",
+        "secA": 2,
+        "secB": 1,
+        "secC": 1,
+        "maxMarks": 24,
+        "minAnswer": "Definition + kinds (secured/unsecured, redeemable/irredeemable, convertible) + distinction from shares",
+        "overlaps": [
+          "Share Capital (#1)"
+        ],
+        "years": "2016, 2018, 2023, 2025",
+        "tags": [
+          "Debentures"
+        ],
+        "strategy": "Appeared as 20-marker in 2025."
+      },
+      {
+        "rank": 12,
+        "topic": "Company as Legal Person / Salomon v Salomon",
+        "repeats": 3,
+        "total": 8,
+        "difficulty": 4,
+        "prediction": "MEDIUM",
+        "secA": 0,
+        "secB": 2,
+        "secC": 1,
+        "maxMarks": 24,
+        "minAnswer": "Salomon case facts + separate legal entity principle + implications",
+        "overlaps": [
+          "Corporate Veil (#5)"
+        ],
+        "years": "2016, 2022, 2024",
+        "tags": [
+          "Legal Person",
+          "Salomon"
+        ],
+        "strategy": "Often merged with Corporate Veil questions."
+      },
+      {
+        "rank": 13,
+        "topic": "Winding Up — Meaning, Grounds, Voluntary vs Compulsory",
+        "repeats": 3,
+        "total": 8,
+        "difficulty": 6,
+        "prediction": "LOW",
+        "secA": 0,
+        "secB": 0,
+        "secC": 3,
+        "maxMarks": 20,
+        "minAnswer": "Define + modes + grounds under Section 271 + just & equitable",
+        "overlaps": [],
+        "years": "2016, 2018, 2023",
+        "tags": [
+          "Winding Up"
+        ],
+        "strategy": "Cyclical — may return."
+      }
+    ],
+    "safeCombos": [
+      {
+        "label": "Combo A (Safest)",
+        "topics": [
+          "Foss v Harbottle",
+          "Indoor Management",
+          "Corporate Veil"
+        ]
+      },
+      {
+        "label": "Combo B",
+        "topics": [
+          "MOA/AOA",
+          "Directors",
+          "Share Capital"
+        ]
+      },
+      {
+        "label": "Combo C",
+        "topics": [
+          "Ultra Vires",
+          "Meetings",
+          "Winding Up"
+        ]
+      }
+    ],
+    "goldenCases": [
+      {
+        "name": "LIC of India v Escorts Ltd (1985)",
+        "principle": "Definitive Indian test for veil piercing + shareholder rights + EGM requisition + share transfer",
+        "covers": [
+          {
+            "topic": "Share Capital",
+            "priority": 1
+          },
+          {
+            "topic": "Majority Rule",
+            "priority": 2
+          },
+          {
+            "topic": "Corporate Veil",
+            "priority": 5
+          },
+          {
+            "topic": "Directors",
+            "priority": 7
+          },
+          {
+            "topic": "Meetings",
+            "priority": 9
+          }
+        ]
+      },
+      {
+        "name": "Salomon v Salomon (1897)",
+        "principle": "Company is separate legal person — even one-man company is distinct from members",
+        "covers": [
+          {
+            "topic": "Kinds of Companies",
+            "priority": 4
+          },
+          {
+            "topic": "Corporate Veil",
+            "priority": 5
+          },
+          {
+            "topic": "Legal Person",
+            "priority": 12
+          }
+        ]
+      },
+      {
+        "name": "Ashbury Railway v Riche (1875)",
+        "principle": "Ultra vires = void ab initio — cannot be ratified even by all shareholders",
+        "covers": [
+          {
+            "topic": "MOA/AOA",
+            "priority": 6
+          },
+          {
+            "topic": "Prospectus",
+            "priority": 8
+          },
+          {
+            "topic": "Ultra Vires",
+            "priority": 10
+          }
+        ]
+      },
+      {
+        "name": "Foss v Harbottle + Edwards v Halliwell (1843/1950)",
+        "principle": "Proper plaintiff rule + exception for personal rights of members",
+        "covers": [
+          {
+            "topic": "Majority Rule",
+            "priority": 2
+          },
+          {
+            "topic": "Directors",
+            "priority": 7
+          },
+          {
+            "topic": "Meetings",
+            "priority": 9
+          }
+        ]
+      }
+    ]
+  },
+  "labour-law": {
+    "id": "labour-law",
+    "code": "K-4002",
+    "name": "Labour & Industrial Law",
+    "semester": 4,
+    "oneLiner": "Trade unions, strikes, wages, compensation & maternity benefits under 5+ Acts",
+    "difficulty": "Medium",
+    "style": "Section Heavy",
+    "years": [
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "papersCount": 8,
+    "priorities": [
+      {
+        "rank": 1,
+        "topic": "Trade Union — Registration, Rights, Immunities, Outsiders, General Fund",
+        "repeats": 8,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "HIGH",
+        "secA": 5,
+        "secB": 3,
+        "secC": 7,
+        "maxMarks": 28,
+        "minAnswer": "Define Sec 2(h) + registration Sec 4-8 (min 7 members) + rights Sec 15-16 + immunities Sec 17-18 + outsiders role",
+        "overlaps": [
+          "Collective Bargaining (#8)"
+        ],
+        "years": "ALL 8 years",
+        "tags": [
+          "Trade Union",
+          "Core"
+        ],
+        "strategy": "100% — appears EVERY year, often in MULTIPLE questions per paper."
+      },
+      {
+        "rank": 2,
+        "topic": "Retrenchment / Layoff / Closure — Definitions, Distinction, Sec 25-F/G/H",
+        "repeats": 7,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "HIGH",
+        "secA": 4,
+        "secB": 3,
+        "secC": 2,
+        "maxMarks": 24,
+        "minAnswer": "Layoff Sec 2(kkk) + Retrenchment Sec 2(oo) + distinction table + Sec 25-F conditions + Sec 25-G last-come-first-go",
+        "overlaps": [],
+        "years": "2016, 2018, 2019, 2022, 2023, 2024, 2025",
+        "tags": [
+          "Retrenchment",
+          "Layoff"
+        ],
+        "strategy": "88% — 'difference between layoff and retrenchment' is a favourite."
+      },
+      {
+        "rank": 3,
+        "topic": "Strike & Lockout — Meaning, Distinction, Legality, Constitutional Right",
+        "repeats": 6,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "HIGH",
+        "secA": 3,
+        "secB": 1,
+        "secC": 3,
+        "maxMarks": 24,
+        "minAnswer": "Strike Sec 2(q) + Lockout Sec 2(l) + distinction + Sec 22-24 illegality + B.R. Singh case (not fundamental right)",
+        "overlaps": [
+          "Industrial Dispute (#4)"
+        ],
+        "years": "2017, 2019, 2022, 2023, 2024, 2025",
+        "tags": [
+          "Strike",
+          "Lockout"
+        ],
+        "strategy": "Classic 20-marker: 'Lockout is weapon of employers, strike of workers'"
+      },
+      {
+        "rank": 4,
+        "topic": "Industrial Dispute — Definition, Scope, Individual vs Industrial, Workman",
+        "repeats": 6,
+        "total": 8,
+        "difficulty": 6,
+        "prediction": "MEDIUM-HIGH",
+        "secA": 2,
+        "secB": 3,
+        "secC": 4,
+        "maxMarks": 28,
+        "minAnswer": "Sec 2(k) definition + essentials + individual vs industrial Sec 2A + workman Sec 2(s) + Bangalore Water Supply",
+        "overlaps": [
+          "Strike/Lockout (#3)"
+        ],
+        "years": "2017, 2018, 2019, 2022, 2023, 2024",
+        "tags": [
+          "ID",
+          "Workman"
+        ],
+        "strategy": "Core conceptual topic with multiple angles."
+      },
+      {
+        "rank": 5,
+        "topic": "Workmen's Compensation Act 1923 — Employer Liability, Amount, Disablement",
+        "repeats": 5,
+        "total": 8,
+        "difficulty": 4,
+        "prediction": "HIGH",
+        "secA": 2,
+        "secB": 3,
+        "secC": 2,
+        "maxMarks": 24,
+        "minAnswer": "Scope + employer liability conditions (arising out of + in course of employment) + Sec 4 amount + disablement types + notional extension",
+        "overlaps": [],
+        "years": "2019, 2022, 2023, 2024, 2025",
+        "tags": [
+          "WC Act",
+          "Compensation"
+        ],
+        "strategy": "Every year since 2019. Active hot streak."
+      },
+      {
+        "rank": 6,
+        "topic": "Payment of Wages Act 1936 — Objects, Deductions, Fixation, Factory vs Establishment",
+        "repeats": 5,
+        "total": 8,
+        "difficulty": 4,
+        "prediction": "HIGH",
+        "secA": 2,
+        "secB": 2,
+        "secC": 2,
+        "maxMarks": 24,
+        "minAnswer": "Wages Sec 2(vi) + authorised deductions Sec 7 (12 types) + time of payment Sec 5 + factory vs establishment",
+        "overlaps": [],
+        "years": "2019, 2022, 2023, 2024, 2025",
+        "tags": [
+          "Wages",
+          "Deductions"
+        ],
+        "strategy": "Every year since 2019. Section 7 deductions list is key."
+      },
+      {
+        "rank": 7,
+        "topic": "Maternity Benefit Act 1961 — Period, Penalty, Payment on Death",
+        "repeats": 5,
+        "total": 8,
+        "difficulty": 4,
+        "prediction": "HIGH",
+        "secA": 2,
+        "secB": 2,
+        "secC": 2,
+        "maxMarks": 24,
+        "minAnswer": "Eligibility + 26 weeks period + conditions (80 days in preceding 12 months) + penalty + death provision Sec 5(4)",
+        "overlaps": [],
+        "years": "2019, 2022, 2023, 2024, 2025",
+        "tags": [
+          "Maternity",
+          "26 Weeks"
+        ],
+        "strategy": "Straightforward factual. Air India v Nergesh Meerza case."
+      },
+      {
+        "rank": 8,
+        "topic": "Collective Bargaining + Growth of Trade Unions in India",
+        "repeats": 5,
+        "total": 8,
+        "difficulty": 3,
+        "prediction": "MEDIUM-HIGH",
+        "secA": 3,
+        "secB": 0,
+        "secC": 3,
+        "maxMarks": 24,
+        "minAnswer": "Define + process + importance + TU history (1918 Madras → AITUC 1920 → TU Act 1926)",
+        "overlaps": [
+          "Trade Union (#1)"
+        ],
+        "years": "2016, 2017, 2019, 2022, 2024, 2025",
+        "tags": [
+          "Collective Bargaining",
+          "History"
+        ],
+        "strategy": "Easy narrative 20-marker."
+      },
+      {
+        "rank": 9,
+        "topic": "ID Act 1947 — Scope, Objects, Features + Sec 11-A Tribunal Powers",
+        "repeats": 4,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "MEDIUM-HIGH",
+        "secA": 0,
+        "secB": 0,
+        "secC": 4,
+        "maxMarks": 20,
+        "minAnswer": "ID Act objectives + features + authorities + Sec 11-A discretionary power",
+        "overlaps": [
+          "Industrial Dispute (#4)"
+        ],
+        "years": "2018, 2022, 2024, 2025",
+        "tags": [
+          "ID Act",
+          "Sec 11-A"
+        ],
+        "strategy": "Appeared in 2025."
+      },
+      {
+        "rank": 10,
+        "topic": "Evolution of Industrial Legislation in India — History",
+        "repeats": 4,
+        "total": 8,
+        "difficulty": 3,
+        "prediction": "MEDIUM",
+        "secA": 0,
+        "secB": 0,
+        "secC": 4,
+        "maxMarks": 20,
+        "minAnswer": "Factories Act 1881 → Trade Disputes 1929 → PW Act 1936 → ID Act 1947 → Labour Codes 2020",
+        "overlaps": [],
+        "years": "2018, 2019, 2022, 2023",
+        "tags": [
+          "Evolution",
+          "History"
+        ],
+        "strategy": "Backup 20-marker. Easy pages."
+      },
+      {
+        "rank": 11,
+        "topic": "EPF Act 1952 — Object, Contribution, Scheme",
+        "repeats": 3,
+        "total": 8,
+        "difficulty": 3,
+        "prediction": "LOW",
+        "secA": 0,
+        "secB": 1,
+        "secC": 2,
+        "maxMarks": 20,
+        "minAnswer": "Object + contribution (employer + employee) + scheme relevance",
+        "overlaps": [],
+        "years": "2019, 2022, 2023, 2024",
+        "tags": [
+          "EPF"
+        ],
+        "strategy": "Often appears as short note."
+      },
+      {
+        "rank": 12,
+        "topic": "Industry Definition — Bangalore Water Supply Triple Test",
+        "repeats": 3,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "LOW",
+        "secA": 1,
+        "secB": 0,
+        "secC": 2,
+        "maxMarks": 20,
+        "minAnswer": "Triple test: systematic activity + employer-employee cooperation + production of goods/services",
+        "overlaps": [
+          "Industrial Dispute (#4)"
+        ],
+        "years": "2018, 2019, 2022",
+        "tags": [
+          "Industry",
+          "Bangalore"
+        ],
+        "strategy": "Key case law topic."
+      }
+    ],
+    "safeCombos": [
+      {
+        "label": "Combo A (Safest)",
+        "topics": [
+          "Trade Union Immunities",
+          "Strike vs Lockout",
+          "Retrenchment/Layoff"
+        ]
+      },
+      {
+        "label": "Combo B",
+        "topics": [
+          "WC Act Liability",
+          "Payment of Wages",
+          "Maternity Benefit"
+        ]
+      },
+      {
+        "label": "Combo C",
+        "topics": [
+          "Evolution",
+          "Collective Bargaining",
+          "ID Act Scope"
+        ]
+      }
+    ],
+    "goldenCases": [
+      {
+        "name": "Bangalore Water Supply v A. Rajappa (1978)",
+        "principle": "Triple test for 'Industry' — redefined entire scope of ID Act 1947",
+        "covers": [
+          {
+            "topic": "Industrial Dispute",
+            "priority": 4
+          },
+          {
+            "topic": "ID Act Scope",
+            "priority": 9
+          },
+          {
+            "topic": "Industry Definition",
+            "priority": 12
+          }
+        ]
+      },
+      {
+        "name": "Dimakuchi Tea Estate (1958) + Bombay Union of Journalists (1964)",
+        "principle": "Individual dispute becomes industrial via TU espousal + strike as collective bargaining weapon",
+        "covers": [
+          {
+            "topic": "Trade Union",
+            "priority": 1
+          },
+          {
+            "topic": "Strike & Lockout",
+            "priority": 3
+          },
+          {
+            "topic": "Industrial Dispute",
+            "priority": 4
+          }
+        ]
+      },
+      {
+        "name": "Air India v Nergesh Meerza (1981)",
+        "principle": "Termination on pregnancy violates Art 14, 15, 16 — wrongful retrenchment",
+        "covers": [
+          {
+            "topic": "Retrenchment",
+            "priority": 2
+          },
+          {
+            "topic": "Industrial Dispute",
+            "priority": 4
+          },
+          {
+            "topic": "Maternity Benefit",
+            "priority": 7
+          }
+        ]
+      },
+      {
+        "name": "B.R. Singh v Union of India (1989)",
+        "principle": "Strike is NOT fundamental right but legal right under statutory conditions",
+        "covers": [
+          {
+            "topic": "Trade Union",
+            "priority": 1
+          },
+          {
+            "topic": "Strike & Lockout",
+            "priority": 3
+          },
+          {
+            "topic": "ID Act Scope",
+            "priority": 9
+          }
+        ]
+      }
+    ]
+  },
+  "environmental-law": {
+    "id": "environmental-law",
+    "code": "K-4003",
+    "name": "Environmental Law",
+    "semester": 4,
+    "oneLiner": "Constitutional provisions, pollution control Acts & judicial activism for environment",
+    "difficulty": "Easy",
+    "style": "Narrative + Cases",
+    "years": [
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "papersCount": 8,
+    "priorities": [
+      {
+        "rank": 1,
+        "topic": "Constitutional Provisions — Art 48A, 51A(g), 21, DPSP for Environment",
+        "repeats": 8,
+        "total": 8,
+        "difficulty": 4,
+        "prediction": "HIGH",
+        "secA": 1,
+        "secB": 3,
+        "secC": 5,
+        "maxMarks": 28,
+        "minAnswer": "Art 48A (DPSP) + Art 51A(g) (duty) + Art 21 (right to clean environment) + Subhash Kumar case + MC Mehta cases",
+        "overlaps": [
+          "PIL (#6)",
+          "Sustainable Dev (#7)"
+        ],
+        "years": "ALL 8 years",
+        "tags": [
+          "Constitution",
+          "Art 48A",
+          "DPSP"
+        ],
+        "strategy": "100% — appeared EVERY year. Guaranteed 20-marker."
+      },
+      {
+        "rank": 2,
+        "topic": "Air Act 1981 — State Board, Industrial Plants, Penal Provisions",
+        "repeats": 7,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "HIGH",
+        "secA": 1,
+        "secB": 2,
+        "secC": 6,
+        "maxMarks": 28,
+        "minAnswer": "Objectives + State Board Sec 5 + powers Sec 17 + restrictions Sec 21 + penal provisions Sec 37-40",
+        "overlaps": [
+          "Water Act (#4)"
+        ],
+        "years": "2016-2019, 2022, 2023, 2024",
+        "tags": [
+          "Air Act",
+          "State Board"
+        ],
+        "strategy": "88% — skipped 2025, due for return."
+      },
+      {
+        "rank": 3,
+        "topic": "Pollution Types — Air, Water, Noise, Soil + Global Effects",
+        "repeats": 7,
+        "total": 8,
+        "difficulty": 3,
+        "prediction": "HIGH",
+        "secA": 3,
+        "secB": 3,
+        "secC": 1,
+        "maxMarks": 14,
+        "minAnswer": "6 types (air/water/noise/soil/thermal/radioactive) + causes + effects + ozone/greenhouse/acid rain",
+        "overlaps": [],
+        "years": "2016-2019, 2022, 2023, 2024, 2025",
+        "tags": [
+          "Pollution",
+          "Global Effects"
+        ],
+        "strategy": "88% — easiest topic. Always Sec A/B."
+      },
+      {
+        "rank": 4,
+        "topic": "Water Act 1974 — State/Joint Board, Central Lab, Sampling, Effluent",
+        "repeats": 6,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "HIGH",
+        "secA": 2,
+        "secB": 2,
+        "secC": 5,
+        "maxMarks": 28,
+        "minAnswer": "State Board + Joint Board Sec 13 + Central Lab Sec 51 + sampling Sec 21 + prohibition Sec 24 + penalties",
+        "overlaps": [
+          "Air Act (#2)"
+        ],
+        "years": "2016, 2017, 2018, 2023, 2024, 2025",
+        "tags": [
+          "Water Act",
+          "Sampling"
+        ],
+        "strategy": "75% — hot streak 2023-2025."
+      },
+      {
+        "rank": 5,
+        "topic": "Indian Forest Act 1927 — Reserve vs Protected Forest, Rules, Punishment",
+        "repeats": 6,
+        "total": 8,
+        "difficulty": 3,
+        "prediction": "HIGH",
+        "secA": 5,
+        "secB": 0,
+        "secC": 4,
+        "maxMarks": 24,
+        "minAnswer": "Reserve Sec 3-27 + Protected Sec 29-34 + distinction table + state govt rules Sec 30-32 + penalties Sec 26",
+        "overlaps": [],
+        "years": "2016, 2017, 2019, 2022, 2024, 2025",
+        "tags": [
+          "Forest Act",
+          "Reserve"
+        ],
+        "strategy": "75% — 'distinguish reserve and protected' is a guaranteed Sec C question."
+      },
+      {
+        "rank": 6,
+        "topic": "PIL & Judicial Activism — MC Mehta, Vellore Citizens, SC Role",
+        "repeats": 6,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "HIGH",
+        "secA": 0,
+        "secB": 2,
+        "secC": 4,
+        "maxMarks": 24,
+        "minAnswer": "PIL definition + MC Mehta 1987 (absolute liability) + Vellore Citizens (polluter pays) + Indian Council case (precautionary)",
+        "overlaps": [
+          "Constitutional (#1)",
+          "Sustainable Dev (#7)"
+        ],
+        "years": "2016, 2018, 2019, 2023, 2024, 2025",
+        "tags": [
+          "PIL",
+          "MC Mehta"
+        ],
+        "strategy": "75% — active hot streak 2023-2025."
+      },
+      {
+        "rank": 7,
+        "topic": "Sustainable Development + International Treaties (Stockholm, Rio, Kyoto, Paris)",
+        "repeats": 5,
+        "total": 8,
+        "difficulty": 3,
+        "prediction": "MEDIUM-HIGH",
+        "secA": 1,
+        "secB": 1,
+        "secC": 3,
+        "maxMarks": 24,
+        "minAnswer": "Define + Brundtland 1987 + Stockholm 1972 + Rio 1992 + Kyoto + Paris 2015 + Vellore Citizens case",
+        "overlaps": [
+          "Constitutional (#1)",
+          "PIL (#6)"
+        ],
+        "years": "2018, 2019, 2023, 2024, 2025",
+        "tags": [
+          "Sustainable Dev",
+          "Treaties"
+        ],
+        "strategy": "Easy narrative — fill pages with conferences."
+      },
+      {
+        "rank": 8,
+        "topic": "EP Act 1986 — Rules, Central Govt Powers, Hazardous Wastes",
+        "repeats": 3,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "MEDIUM",
+        "secA": 0,
+        "secB": 0,
+        "secC": 3,
+        "maxMarks": 20,
+        "minAnswer": "Bhopal Gas background + Sec 3 powers + Sec 6 standards + Sec 15 penalties + Sec 19 cognizance",
+        "overlaps": [],
+        "years": "2016, 2019, 2024",
+        "tags": [
+          "EP Act",
+          "Central Govt"
+        ],
+        "strategy": "Always 20-marker when it appears."
+      },
+      {
+        "rank": 9,
+        "topic": "CrPC Sec 133 / IPC Provisions for Environmental Pollution",
+        "repeats": 4,
+        "total": 8,
+        "difficulty": 4,
+        "prediction": "MEDIUM",
+        "secA": 0,
+        "secB": 1,
+        "secC": 3,
+        "maxMarks": 24,
+        "minAnswer": "CrPC 133 scope + IPC 268 (nuisance) + 277 (water) + 278 (atmosphere) + 284 (poisonous) + Ratlam case",
+        "overlaps": [],
+        "years": "2016, 2022, 2023, 2025",
+        "tags": [
+          "CrPC",
+          "IPC",
+          "Nuisance"
+        ],
+        "strategy": "Appeared in 2025."
+      },
+      {
+        "rank": 10,
+        "topic": "NGT — Constitution, Powers, Functions, Cases",
+        "repeats": 2,
+        "total": 8,
+        "difficulty": 4,
+        "prediction": "LOW",
+        "secA": 0,
+        "secB": 0,
+        "secC": 2,
+        "maxMarks": 20,
+        "minAnswer": "NGT Act 2010 + composition + jurisdiction + powers + precautionary principle",
+        "overlaps": [],
+        "years": "2022, 2023",
+        "tags": [
+          "NGT"
+        ],
+        "strategy": "Disappeared after 2023."
+      }
+    ],
+    "safeCombos": [
+      {
+        "label": "Combo A (Safest — covers 100%)",
+        "topics": [
+          "Constitutional Provisions",
+          "PIL/Judicial Activism",
+          "Air Act"
+        ]
+      },
+      {
+        "label": "Combo B",
+        "topics": [
+          "Water Act",
+          "Forest Act",
+          "EP Act 1986"
+        ]
+      },
+      {
+        "label": "Combo C",
+        "topics": [
+          "Sustainable Development",
+          "CrPC/IPC",
+          "NGT"
+        ]
+      }
+    ],
+    "goldenCases": [
+      {
+        "name": "MC Mehta v UOI (1987) — Oleum Gas Leak",
+        "principle": "ABSOLUTE LIABILITY for hazardous industries — no exceptions, not even Act of God",
+        "covers": [
+          {
+            "topic": "Constitutional Art 21",
+            "priority": 1
+          },
+          {
+            "topic": "PIL & Judicial Activism",
+            "priority": 6
+          },
+          {
+            "topic": "EP Act 1986",
+            "priority": 8
+          },
+          {
+            "topic": "Hazardous Substances",
+            "priority": 3
+          }
+        ]
+      },
+      {
+        "name": "Vellore Citizens v UOI (1996)",
+        "principle": "Polluter Pays + Precautionary Principle formally adopted as Indian law",
+        "covers": [
+          {
+            "topic": "Constitutional Art 21",
+            "priority": 1
+          },
+          {
+            "topic": "PIL & Judicial Activism",
+            "priority": 6
+          },
+          {
+            "topic": "Sustainable Development",
+            "priority": 7
+          }
+        ]
+      },
+      {
+        "name": "Indian Council v UOI (1996)",
+        "principle": "Precautionary principle — burden of proof on industry to show safety",
+        "covers": [
+          {
+            "topic": "Constitutional Art 21",
+            "priority": 1
+          },
+          {
+            "topic": "PIL & Judicial Activism",
+            "priority": 6
+          },
+          {
+            "topic": "Sustainable Development",
+            "priority": 7
+          }
+        ]
+      },
+      {
+        "name": "Municipal Council Ratlam v Vardhichand (1980)",
+        "principle": "CrPC Sec 133 — magistrate can ORDER municipality to remove nuisance; 'no funds' is no defence",
+        "covers": [
+          {
+            "topic": "Constitutional Art 21",
+            "priority": 1
+          },
+          {
+            "topic": "PIL & Judicial Activism",
+            "priority": 6
+          },
+          {
+            "topic": "CrPC/IPC Provisions",
+            "priority": 9
+          }
+        ]
+      }
+    ]
+  },
+  "banking-law": {
+    "id": "banking-law",
+    "code": "K-4006",
+    "name": "Banking Law incl. NI Act",
+    "semester": 4,
+    "oneLiner": "Negotiable instruments, RBI functions, bank-customer relations & cheque dishonour",
+    "difficulty": "Easy",
+    "style": "Rote Heavy",
+    "optional": true,
+    "years": [
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2022",
+      "2023"
+    ],
+    "papersCount": 6,
+    "priorities": [
+      {
+        "rank": 1,
+        "topic": "Negotiable Instruments — Meaning, Kinds (PN, BoE, Cheque), Characteristics",
+        "repeats": 6,
+        "total": 6,
+        "difficulty": 4,
+        "prediction": "HIGH",
+        "secA": 5,
+        "secB": 2,
+        "secC": 2,
+        "maxMarks": 28,
+        "minAnswer": "Sec 13 definition + PN Sec 4 + BoE Sec 5 + Cheque Sec 6 + characteristics + distinction table",
+        "overlaps": [
+          "BoE (#4)",
+          "Endorsement (#5)"
+        ],
+        "years": "ALL 6 years",
+        "tags": [
+          "NI",
+          "Types",
+          "Definitions"
+        ],
+        "strategy": "100% — appeared every year. Free Sec A marks."
+      },
+      {
+        "rank": 2,
+        "topic": "RBI — Legal Status, Functions, Structure, Role, Inflation Control",
+        "repeats": 5,
+        "total": 6,
+        "difficulty": 5,
+        "prediction": "HIGH",
+        "secA": 3,
+        "secB": 0,
+        "secC": 4,
+        "maxMarks": 24,
+        "minAnswer": "RBI Act 1934 + structure + functions (monetary, regulatory, developmental, supervisory) + inflation tools (repo, CRR, SLR)",
+        "overlaps": [],
+        "years": "2017, 2018, 2019, 2022, 2023",
+        "tags": [
+          "RBI",
+          "Functions"
+        ],
+        "strategy": "83% — almost guaranteed Sec C 20-marker."
+      },
+      {
+        "rank": 3,
+        "topic": "Holder vs Holder in Due Course — Define, Distinguish, Privileges",
+        "repeats": 5,
+        "total": 6,
+        "difficulty": 4,
+        "prediction": "HIGH",
+        "secA": 1,
+        "secB": 3,
+        "secC": 2,
+        "maxMarks": 24,
+        "minAnswer": "Holder Sec 8 + HDC Sec 9 + distinction + privileges Sec 53, 120 + Bharat Barrel case",
+        "overlaps": [],
+        "years": "2017, 2018, 2019, 2022, 2023",
+        "tags": [
+          "Holder",
+          "HDC"
+        ],
+        "strategy": "83% — core NI Act topic."
+      },
+      {
+        "rank": 4,
+        "topic": "Bill of Exchange — Define, Characteristics, Kinds, Distinction",
+        "repeats": 4,
+        "total": 6,
+        "difficulty": 5,
+        "prediction": "MEDIUM",
+        "secA": 2,
+        "secB": 1,
+        "secC": 1,
+        "maxMarks": 24,
+        "minAnswer": "Sec 5 definition + characteristics + inland/foreign + time/demand + distinction from cheque/PN",
+        "overlaps": [
+          "NI Types (#1)"
+        ],
+        "years": "2017, 2018, 2019, 2022",
+        "tags": [
+          "BoE",
+          "Sec 5"
+        ],
+        "strategy": "Significant overlap with NI Types."
+      },
+      {
+        "rank": 5,
+        "topic": "Endorsement — Definition, Kinds, Forged Endorsement Effect",
+        "repeats": 3,
+        "total": 6,
+        "difficulty": 5,
+        "prediction": "MEDIUM",
+        "secA": 1,
+        "secB": 0,
+        "secC": 2,
+        "maxMarks": 24,
+        "minAnswer": "Sec 15 definition + blank/special/restrictive/conditional/partial + forged Sec 41-42 (title doesn't pass)",
+        "overlaps": [
+          "NI Types (#1)"
+        ],
+        "years": "2016, 2019, 2022",
+        "tags": [
+          "Endorsement",
+          "Sec 15"
+        ],
+        "strategy": "Cyclical."
+      },
+      {
+        "rank": 6,
+        "topic": "Bank-Customer Relationship — Nature, Types, Duties",
+        "repeats": 3,
+        "total": 6,
+        "difficulty": 5,
+        "prediction": "MEDIUM",
+        "secA": 1,
+        "secB": 1,
+        "secC": 2,
+        "maxMarks": 24,
+        "minAnswer": "Debtor-creditor + bailor-bailee + agent-principal + trustee + bank duties + Syndicate Bank case",
+        "overlaps": [
+          "Banker's Lien (#11)"
+        ],
+        "years": "2016, 2022, 2023",
+        "tags": [
+          "Relationship",
+          "Customer"
+        ],
+        "strategy": "Appeared in 2023."
+      },
+      {
+        "rank": 7,
+        "topic": "FEMA — Salient Features, Foreign Exchange Management",
+        "repeats": 3,
+        "total": 6,
+        "difficulty": 4,
+        "prediction": "MEDIUM-HIGH",
+        "secA": 0,
+        "secB": 2,
+        "secC": 1,
+        "maxMarks": 20,
+        "minAnswer": "Replaced FERA 1973 + objectives + features (current account free, capital regulated, civil penalties unlike FERA)",
+        "overlaps": [],
+        "years": "2019, 2022, 2023",
+        "tags": [
+          "FEMA",
+          "Foreign Exchange"
+        ],
+        "strategy": "3 consecutive recent years."
+      },
+      {
+        "rank": 8,
+        "topic": "Dishonour of Cheque — Sec 138, Essentials, Procedure, Penalty",
+        "repeats": 3,
+        "total": 6,
+        "difficulty": 5,
+        "prediction": "MEDIUM-HIGH",
+        "secA": 0,
+        "secB": 1,
+        "secC": 2,
+        "maxMarks": 24,
+        "minAnswer": "Sec 138 elements + procedure (notice 30 days, complaint 1 month) + punishment (2 years + twice amount) + M/s Meters case",
+        "overlaps": [],
+        "years": "2019, 2022, 2023",
+        "tags": [
+          "Sec 138",
+          "Dishonour"
+        ],
+        "strategy": "3 consecutive recent years — important practical topic."
+      },
+      {
+        "rank": 9,
+        "topic": "Banking Evolution / Development in India — History",
+        "repeats": 3,
+        "total": 6,
+        "difficulty": 3,
+        "prediction": "MEDIUM",
+        "secA": 0,
+        "secB": 0,
+        "secC": 3,
+        "maxMarks": 20,
+        "minAnswer": "Presidency banks → Imperial Bank → SBI 1955 → nationalization 1969/1980 → liberalization → digital",
+        "overlaps": [],
+        "years": "2016, 2019, 2023",
+        "tags": [
+          "History",
+          "Evolution"
+        ],
+        "strategy": "Narrative backup 20-marker."
+      },
+      {
+        "rank": 10,
+        "topic": "Paying/Collecting Banker — Duties, Liabilities, Protection (Sec 85-89)",
+        "repeats": 3,
+        "total": 6,
+        "difficulty": 5,
+        "prediction": "MEDIUM",
+        "secA": 0,
+        "secB": 0,
+        "secC": 3,
+        "maxMarks": 20,
+        "minAnswer": "Paying banker duties + Sec 85 protection + collecting banker duties + Sec 131 protection",
+        "overlaps": [
+          "Bank-Customer (#6)"
+        ],
+        "years": "2016, 2019, 2022",
+        "tags": [
+          "Paying Banker",
+          "Collecting Banker"
+        ],
+        "strategy": "Cyclical."
+      }
+    ],
+    "safeCombos": [
+      {
+        "label": "Combo A (Safest)",
+        "topics": [
+          "RBI Functions",
+          "Holder/HDC",
+          "NI Kinds"
+        ]
+      },
+      {
+        "label": "Combo B",
+        "topics": [
+          "Endorsement",
+          "Dishonour Sec 138",
+          "Bank-Customer"
+        ]
+      },
+      {
+        "label": "Combo C",
+        "topics": [
+          "Banking Evolution",
+          "FEMA",
+          "Paying/Collecting Banker"
+        ]
+      }
+    ],
+    "goldenCases": [
+      {
+        "name": "Bharat Barrel v Amin Chand Payrelal (1999)",
+        "principle": "Sec 118 presumption — every NI presumed for consideration, HDC gets clean title free from defects",
+        "covers": [
+          {
+            "topic": "NI Types",
+            "priority": 1
+          },
+          {
+            "topic": "Holder/HDC",
+            "priority": 3
+          },
+          {
+            "topic": "Endorsement",
+            "priority": 5
+          }
+        ]
+      },
+      {
+        "name": "Canara Bank v Canara Sales Corp (1987)",
+        "principle": "Banker has general lien on all securities deposited; multi-layered bank-customer relationship",
+        "covers": [
+          {
+            "topic": "Bank-Customer",
+            "priority": 6
+          },
+          {
+            "topic": "Paying/Collecting Banker",
+            "priority": 10
+          },
+          {
+            "topic": "Banker's Lien",
+            "priority": 11
+          }
+        ]
+      },
+      {
+        "name": "M/s Meters v Kanchan Mehta (2017)",
+        "principle": "Sec 138 fast-track trial + compounding at any stage + use of technology for modern banking",
+        "covers": [
+          {
+            "topic": "NI Types",
+            "priority": 1
+          },
+          {
+            "topic": "Dishonour Sec 138",
+            "priority": 8
+          },
+          {
+            "topic": "Banking Evolution",
+            "priority": 9
+          }
+        ]
+      }
+    ]
+  },
+  "adr": {
+    "id": "adr",
+    "code": "K-4007",
+    "name": "Arbitration, Conciliation & ADR",
+    "semester": 4,
+    "oneLiner": "Alternative dispute resolution — arbitration, conciliation, Lok Adalat & mediation",
+    "difficulty": "Easy",
+    "style": "Conceptual",
+    "years": [
+      "2019",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "papersCount": 5,
+    "practical": true,
+    "practicalNote": "Theory + Practical paper. 2019-2024: 100 marks theory. 2025 onwards: 50 marks theory + 50 practical (diary + viva)",
+    "priorities": [
+      {
+        "rank": 1,
+        "topic": "ADR System — Meaning, Nature, Importance, Various Techniques",
+        "repeats": 5,
+        "total": 5,
+        "difficulty": 3,
+        "prediction": "HIGH",
+        "secA": 1,
+        "secB": 0,
+        "secC": 4,
+        "maxMarks": 20,
+        "minAnswer": "Define ADR + list techniques (Arbitration, Conciliation, Mediation, Negotiation, Lok Adalat, Med-Arb, Medola) + importance",
+        "overlaps": [
+          "Lok Adalat (#2)"
+        ],
+        "years": "ALL 5 years",
+        "tags": [
+          "ADR",
+          "Techniques"
+        ],
+        "strategy": "100% — guaranteed every year."
+      },
+      {
+        "rank": 2,
+        "topic": "Lok Adalat — Organisation, Jurisdiction, Powers, Settlement, Effectiveness",
+        "repeats": 5,
+        "total": 5,
+        "difficulty": 3,
+        "prediction": "HIGH",
+        "secA": 0,
+        "secB": 2,
+        "secC": 4,
+        "maxMarks": 20,
+        "minAnswer": "LSA Act 1987 Sec 19-22 + composition + jurisdiction + settlement (Sec 21 — deemed decree, no appeal) + effectiveness",
+        "overlaps": [
+          "ADR (#1)",
+          "Legal Services (#8)"
+        ],
+        "years": "ALL 5 years",
+        "tags": [
+          "Lok Adalat",
+          "LSAA"
+        ],
+        "strategy": "100% — always Sec B or C. Key: settlement is FINAL, non-appealable."
+      },
+      {
+        "rank": 3,
+        "topic": "Arbitral Award — Contents, Setting Aside Sec 34, Finality, Correction Sec 33",
+        "repeats": 4,
+        "total": 5,
+        "difficulty": 4,
+        "prediction": "HIGH",
+        "secA": 1,
+        "secB": 2,
+        "secC": 3,
+        "maxMarks": 20,
+        "minAnswer": "Sec 31 form/contents + Sec 33 correction (30 days) + Sec 34 grounds for setting aside (7 grounds) + ONGC case",
+        "overlaps": [
+          "Arbitral Tribunal (#6)"
+        ],
+        "years": "2019, 2022, 2024, 2025",
+        "tags": [
+          "Award",
+          "Sec 34"
+        ],
+        "strategy": "80% — multiple angles tested."
+      },
+      {
+        "rank": 4,
+        "topic": "Conciliation — Conciliator Role, Settlement Agreement, vs Arbitration",
+        "repeats": 4,
+        "total": 5,
+        "difficulty": 3,
+        "prediction": "HIGH",
+        "secA": 3,
+        "secB": 2,
+        "secC": 0,
+        "maxMarks": 10,
+        "minAnswer": "Part III Sec 61-81 + conciliator Sec 64 + role Sec 67 + settlement Sec 73 + difference from arbitrator",
+        "overlaps": [],
+        "years": "2022, 2023, 2024, 2025",
+        "tags": [
+          "Conciliation",
+          "Sec 73"
+        ],
+        "strategy": "80% — hot streak 2022-2025."
+      },
+      {
+        "rank": 5,
+        "topic": "Types of Arbitration — Domestic, International, Foreign, Fast-Track",
+        "repeats": 4,
+        "total": 5,
+        "difficulty": 2,
+        "prediction": "HIGH",
+        "secA": 4,
+        "secB": 0,
+        "secC": 1,
+        "maxMarks": 10,
+        "minAnswer": "Domestic Sec 2(2) + International Sec 2(1)(f) + Foreign (Part II) + Fast-Track Sec 29B",
+        "overlaps": [],
+        "years": "2022, 2023, 2024, 2025",
+        "tags": [
+          "Types",
+          "Definitions"
+        ],
+        "strategy": "80% — free Sec A marks every year."
+      },
+      {
+        "rank": 6,
+        "topic": "Arbitrator Appointment — Sec 11, Types, Challenge Sec 12-13",
+        "repeats": 3,
+        "total": 5,
+        "difficulty": 5,
+        "prediction": "MEDIUM-HIGH",
+        "secA": 1,
+        "secB": 0,
+        "secC": 3,
+        "maxMarks": 20,
+        "minAnswer": "Sec 11 procedure + Sec 12 challenge grounds + Sec 13 procedure + types (sole, panel)",
+        "overlaps": [
+          "Arbitral Award (#3)"
+        ],
+        "years": "2019, 2022, 2025",
+        "tags": [
+          "Sec 11",
+          "Appointment"
+        ],
+        "strategy": "60% — appeared in 2025."
+      },
+      {
+        "rank": 7,
+        "topic": "Arbitration & Conciliation Act 1996 — Objects, Salient Features",
+        "repeats": 3,
+        "total": 5,
+        "difficulty": 4,
+        "prediction": "HIGH",
+        "secA": 0,
+        "secB": 2,
+        "secC": 1,
+        "maxMarks": 10,
+        "minAnswer": "UNCITRAL Model Law base + objects (fast resolution, minimal court intervention) + key features",
+        "overlaps": [],
+        "years": "2019, 2024, 2025",
+        "tags": [
+          "Act 1996",
+          "Features"
+        ],
+        "strategy": "Appeared in both 2024 and 2025."
+      },
+      {
+        "rank": 8,
+        "topic": "Legal Services / Legal Aid — LSA Act 1987, Entitlement Sec 12",
+        "repeats": 3,
+        "total": 5,
+        "difficulty": 4,
+        "prediction": "MEDIUM",
+        "secA": 1,
+        "secB": 0,
+        "secC": 2,
+        "maxMarks": 20,
+        "minAnswer": "Art 39A + LSA Act + Sec 12 categories (SC/ST, women, children, mentally ill, income threshold) + NALSA",
+        "overlaps": [
+          "Lok Adalat (#2)"
+        ],
+        "years": "2022, 2023, 2024",
+        "tags": [
+          "Legal Aid",
+          "Sec 12"
+        ],
+        "strategy": "Important overlap with Lok Adalat."
+      },
+      {
+        "rank": 9,
+        "topic": "Arbitration Agreement — Meaning, Essential Elements (Sec 7)",
+        "repeats": 3,
+        "total": 5,
+        "difficulty": 5,
+        "prediction": "HIGH",
+        "secA": 1,
+        "secB": 0,
+        "secC": 2,
+        "maxMarks": 20,
+        "minAnswer": "Sec 7 definition + essentials (in writing, signed, intention to arbitrate) + FCI v Joginderpal case",
+        "overlaps": [
+          "Arbitrator Appointment (#6)"
+        ],
+        "years": "2019, 2024, 2025",
+        "tags": [
+          "Sec 7",
+          "Agreement"
+        ],
+        "strategy": "Appeared in both 2024 and 2025."
+      },
+      {
+        "rank": 10,
+        "topic": "Foreign Award — Geneva/NY Convention, Enforcement Conditions",
+        "repeats": 2,
+        "total": 5,
+        "difficulty": 4,
+        "prediction": "LOW",
+        "secA": 0,
+        "secB": 1,
+        "secC": 2,
+        "maxMarks": 20,
+        "minAnswer": "Part II of Act + Geneva Convention + NY Convention + enforcement conditions",
+        "overlaps": [],
+        "years": "2019, 2022",
+        "tags": [
+          "Foreign Award",
+          "Geneva"
+        ],
+        "strategy": "Hasn't appeared since 2022."
+      }
+    ],
+    "safeCombos": [
+      {
+        "label": "Combo A (Safest — covers 100%)",
+        "topics": [
+          "ADR Meaning + Techniques",
+          "Lok Adalat Powers",
+          "Arbitral Award"
+        ]
+      },
+      {
+        "label": "Combo B",
+        "topics": [
+          "Arbitration Agreement",
+          "Arbitrator Appointment",
+          "Legal Services"
+        ]
+      }
+    ],
+    "goldenCases": [
+      {
+        "name": "Afcons Infrastructure v Cherian Varkey (2010)",
+        "principle": "SC guidelines for ADR referral under Sec 89 CPC — listed categories suitable for each ADR mode",
+        "covers": [
+          {
+            "topic": "ADR System",
+            "priority": 1
+          },
+          {
+            "topic": "Lok Adalat",
+            "priority": 2
+          },
+          {
+            "topic": "Conciliation",
+            "priority": 4
+          }
+        ]
+      },
+      {
+        "name": "ONGC v Saw Pipes Ltd (2003)",
+        "principle": "Patent illegality as ground for setting aside award — expanded Sec 34 public policy",
+        "covers": [
+          {
+            "topic": "Arbitral Award",
+            "priority": 3
+          },
+          {
+            "topic": "Act 1996 Features",
+            "priority": 7
+          },
+          {
+            "topic": "Arbitration Agreement",
+            "priority": 9
+          }
+        ]
+      },
+      {
+        "name": "Guru Nanak Foundation v Rattan Singh (1981)",
+        "principle": "Purpose of arbitration = speedy, inexpensive resolution — courts should not interfere",
+        "covers": [
+          {
+            "topic": "ADR System",
+            "priority": 1
+          },
+          {
+            "topic": "Arbitral Award",
+            "priority": 3
+          },
+          {
+            "topic": "Act 1996 Features",
+            "priority": 7
+          }
+        ]
+      }
+    ]
+  },
+  "criminology": {
+    "id": "criminology",
+    "code": "K-4004",
+    "name": "Criminology & Penology",
+    "semester": 4,
+    "oneLiner": "Crime causation, schools of criminology, punishment theories & prison reform",
+    "difficulty": "Easy",
+    "style": "Essay Friendly",
+    "years": [
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "papersCount": 8,
+    "optional": true,
+    "priorities": [
+      {
+        "rank": 1,
+        "topic": "Schools of Criminology — Classical, Italian/Lombroso, Sociological, Clinical, Demonological, Tarde",
+        "repeats": 8,
+        "total": 8,
+        "difficulty": 4,
+        "prediction": "HIGH",
+        "secA": 4,
+        "secB": 2,
+        "secC": 2,
+        "maxMarks": 20,
+        "minAnswer": "6 schools: Classical (Beccaria) + Italian/Positive (Lombroso, Ferri, Garofalo) + Sociological + Clinical + Demonological + Tarde's Imitation",
+        "overlaps": [
+          "Sutherland (#9)"
+        ],
+        "years": "ALL 8 years",
+        "tags": [
+          "Schools",
+          "Lombroso",
+          "Classical"
+        ],
+        "strategy": "100% — at least one school appears every year."
+      },
+      {
+        "rank": 2,
+        "topic": "Criminology — Definition, Scope, Importance, Nature, Methods of Study",
+        "repeats": 7,
+        "total": 8,
+        "difficulty": 3,
+        "prediction": "HIGH",
+        "secA": 1,
+        "secB": 1,
+        "secC": 5,
+        "maxMarks": 20,
+        "minAnswer": "Define + scope (crime, criminal, behaviour, punishment, prevention) + importance + relation with penology & criminal law",
+        "overlaps": [],
+        "years": "2016-2024 (missed 2025)",
+        "tags": [
+          "Criminology",
+          "Scope"
+        ],
+        "strategy": "88% — easiest 20-marker in the subject."
+      },
+      {
+        "rank": 3,
+        "topic": "Capital Punishment — Constitutional Validity, Abolition vs Retention, SC Cases",
+        "repeats": 7,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "HIGH",
+        "secA": 0,
+        "secB": 1,
+        "secC": 6,
+        "maxMarks": 20,
+        "minAnswer": "Art 21 + Bachan Singh 1980 ('rarest of rare') + Machhi Singh 1983 (5 categories) + arguments for/against",
+        "overlaps": [
+          "Theories of Punishment (#7)"
+        ],
+        "years": "2016, 2017, 2019, 2022-2025",
+        "tags": [
+          "Capital Punishment",
+          "Rarest of Rare"
+        ],
+        "strategy": "88% — near-guaranteed Sec C 20-marker."
+      },
+      {
+        "rank": 4,
+        "topic": "Prison System — Defects, Reform Suggestions, Open Prison, Borstal, Prison Labour",
+        "repeats": 7,
+        "total": 8,
+        "difficulty": 3,
+        "prediction": "HIGH",
+        "secA": 2,
+        "secB": 2,
+        "secC": 3,
+        "maxMarks": 20,
+        "minAnswer": "Defects (overcrowding, no classification, untrained staff) + reforms (open prisons, vocational training) + Mulla Committee 1983",
+        "overlaps": [
+          "Parole/Probation (#5)"
+        ],
+        "years": "2016-2018, 2022-2025",
+        "tags": [
+          "Prison",
+          "Reform",
+          "Open Prison"
+        ],
+        "strategy": "88% — multiple framings possible."
+      },
+      {
+        "rank": 5,
+        "topic": "Parole / Probation / Furlough — Distinction, Merits, System, Parole Boards",
+        "repeats": 7,
+        "total": 8,
+        "difficulty": 4,
+        "prediction": "HIGH",
+        "secA": 3,
+        "secB": 0,
+        "secC": 4,
+        "maxMarks": 20,
+        "minAnswer": "Parole (temporary release) vs Probation (suspension, POA 1958) vs Furlough (earned leave) + distinction table",
+        "overlaps": [
+          "Prison (#4)"
+        ],
+        "years": "2016, 2018, 2019, 2022-2025",
+        "tags": [
+          "Parole",
+          "Probation",
+          "Furlough"
+        ],
+        "strategy": "88% — three concepts always tested together."
+      },
+      {
+        "rank": 6,
+        "topic": "Organised Crime — Meaning, Kinds (Drug Trafficking, Terrorism, Cybercrime)",
+        "repeats": 6,
+        "total": 8,
+        "difficulty": 4,
+        "prediction": "HIGH",
+        "secA": 2,
+        "secB": 2,
+        "secC": 2,
+        "maxMarks": 20,
+        "minAnswer": "Define + characteristics (hierarchical, violence, profit motive) + kinds (drugs, human trafficking, money laundering, cyber, terror)",
+        "overlaps": [],
+        "years": "2018, 2019, 2022-2025",
+        "tags": [
+          "Organised Crime"
+        ],
+        "strategy": "75% — appeared every year since 2018."
+      },
+      {
+        "rank": 7,
+        "topic": "Theories of Punishment — Retributive, Deterrent, Preventive, Reformative",
+        "repeats": 5,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "HIGH",
+        "secA": 0,
+        "secB": 0,
+        "secC": 5,
+        "maxMarks": 20,
+        "minAnswer": "5 theories: Retributive (eye for eye) + Deterrent (fear) + Preventive (disable) + Reformative (rehabilitate) + Expiatory (atone)",
+        "overlaps": [
+          "Capital Punishment (#3)"
+        ],
+        "years": "2018, 2019, 2022, 2023, 2025",
+        "tags": [
+          "Punishment",
+          "Reformative"
+        ],
+        "strategy": "63% — always Sec C 20-marker."
+      },
+      {
+        "rank": 8,
+        "topic": "White Collar Crime — Meaning, vs Traditional Crime, Causes, Least Detected",
+        "repeats": 5,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "HIGH",
+        "secA": 0,
+        "secB": 1,
+        "secC": 4,
+        "maxMarks": 20,
+        "minAnswer": "Sutherland coined 1939 + characteristics (respectable persons, occupation, breach of trust) + types (tax evasion, fraud, insider trading)",
+        "overlaps": [],
+        "years": "2017, 2018, 2023, 2024, 2025",
+        "tags": [
+          "White Collar",
+          "Sutherland"
+        ],
+        "strategy": "63% — active hot streak 2023-2025."
+      },
+      {
+        "rank": 9,
+        "topic": "Sutherland's Differential Association Theory",
+        "repeats": 5,
+        "total": 8,
+        "difficulty": 5,
+        "prediction": "MEDIUM",
+        "secA": 1,
+        "secB": 1,
+        "secC": 3,
+        "maxMarks": 20,
+        "minAnswer": "9 propositions. Core: criminal behaviour is LEARNED through interaction. Favourable definitions exceed unfavourable.",
+        "overlaps": [
+          "Schools (#1)"
+        ],
+        "years": "2016, 2017, 2019, 2022, 2023",
+        "tags": [
+          "Differential Association",
+          "Learning Theory"
+        ],
+        "strategy": "63% — hasn't appeared since 2023."
+      },
+      {
+        "rank": 10,
+        "topic": "Juvenile Delinquency — Meaning, Causes, Clinical Services, Gateway to Crime",
+        "repeats": 4,
+        "total": 8,
+        "difficulty": 4,
+        "prediction": "MEDIUM",
+        "secA": 2,
+        "secB": 1,
+        "secC": 1,
+        "maxMarks": 20,
+        "minAnswer": "Define (under 18) + causes (broken home, poverty, peer pressure, media) + JJ Act 2015 + prevention",
+        "overlaps": [],
+        "years": "2016, 2018, 2019, 2025",
+        "tags": [
+          "Juvenile",
+          "Delinquency"
+        ],
+        "strategy": "50% — appeared in 2025."
+      }
+    ],
+    "safeCombos": [
+      {
+        "label": "Combo A (Safest)",
+        "topics": [
+          "Criminology Scope",
+          "Capital Punishment",
+          "Theories of Punishment"
+        ]
+      },
+      {
+        "label": "Combo B",
+        "topics": [
+          "Prison Reform",
+          "Parole/Probation",
+          "White Collar Crime"
+        ]
+      },
+      {
+        "label": "Combo C",
+        "topics": [
+          "Schools of Criminology",
+          "Organised Crime",
+          "Juvenile Delinquency"
+        ]
+      }
+    ],
+    "goldenCases": [
+      {
+        "name": "Bachan Singh v State of Punjab (1980)",
+        "principle": "Rarest of rare doctrine + analysis of all punishment theories",
+        "covers": [
+          {
+            "topic": "Capital Punishment",
+            "priority": 3
+          },
+          {
+            "topic": "Theories of Punishment",
+            "priority": 7
+          },
+          {
+            "topic": "Criminology Scope",
+            "priority": 2
+          }
+        ]
+      },
+      {
+        "name": "Machhi Singh v State of Punjab (1983)",
+        "principle": "5 categories for rarest of rare — manner, motive, magnitude, victim, nature",
+        "covers": [
+          {
+            "topic": "Capital Punishment",
+            "priority": 3
+          },
+          {
+            "topic": "Theories of Punishment",
+            "priority": 7
+          },
+          {
+            "topic": "Organised Crime",
+            "priority": 6
+          }
+        ]
+      },
+      {
+        "name": "Rattan Lal (1965) + Sunil Batra (1978)",
+        "principle": "Probation over prison + prisoners retain Art 21 rights",
+        "covers": [
+          {
+            "topic": "Parole/Probation",
+            "priority": 5
+          },
+          {
+            "topic": "Prison Reform",
+            "priority": 4
+          },
+          {
+            "topic": "Theories of Punishment",
+            "priority": 7
+          }
+        ]
+      }
+    ]
+  },
+  "trust-law": {
+    "id": "trust-law",
+    "code": "K-4005",
+    "name": "Law of Trust, Equity & Fiduciary Relation",
+    "semester": 4,
+    "oneLiner": "History, nature & principles of Equity, Trust creation, Trustee duties, Beneficiary rights",
+    "difficulty": "Medium",
+    "style": "Conceptual",
+    "optional": true,
+    "years": [],
+    "papersCount": 0,
+    "priorities": [],
+    "goldenCases": [],
+    "safeCombos": []
+  }
+}

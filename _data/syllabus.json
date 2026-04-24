@@ -1,0 +1,238 @@
+{
+  "1": {
+    "name": "Semester I",
+    "subjects": [
+      {
+        "code": "K-1001",
+        "name": "Jurisprudence – I (Legal Theory)",
+        "marks": 100
+      },
+      {
+        "code": "K-1002",
+        "name": "Constitutional Law of India – I (Nature of Constitution & Fundamental Rights)",
+        "marks": 100
+      },
+      {
+        "code": "K-1003",
+        "name": "Law of Torts",
+        "marks": 100
+      },
+      {
+        "code": "K-1004",
+        "name": "Law of Crimes – I (Indian Penal Code / BNS)",
+        "marks": 100
+      },
+      {
+        "code": "K-1005",
+        "name": "Contract – I (General Principles of Contract)",
+        "marks": 100
+      }
+    ]
+  },
+  "2": {
+    "name": "Semester II",
+    "subjects": [
+      {
+        "code": "K-2001",
+        "name": "Jurisprudence – II (Legal Concepts)",
+        "marks": 100
+      },
+      {
+        "code": "K-2002",
+        "name": "Constitutional Law of India – II (Structure & Working)",
+        "marks": 100
+      },
+      {
+        "code": "K-2003",
+        "name": "Family Law – I (Hindu Law)",
+        "marks": 100
+      },
+      {
+        "code": "K-2004",
+        "name": "Contract – II (Specific Contract & Law of Partnership)",
+        "marks": 100
+      },
+      {
+        "code": "K-2005",
+        "name": "Indian Legal & Constitutional History",
+        "marks": 100,
+        "optional": true,
+        "optGroup": "Choose 1"
+      },
+      {
+        "code": "K-2006",
+        "name": "Law of Taxation",
+        "marks": 100,
+        "optional": true,
+        "optGroup": "Choose 1"
+      }
+    ]
+  },
+  "3": {
+    "name": "Semester III",
+    "subjects": [
+      {
+        "code": "K-3001",
+        "name": "Family Law – II (Muslim Law)",
+        "marks": 100
+      },
+      {
+        "code": "K-3002",
+        "name": "Public International Law",
+        "marks": 100
+      },
+      {
+        "code": "K-3003",
+        "name": "Administrative Law",
+        "marks": 100
+      },
+      {
+        "code": "K-3004",
+        "name": "Law of Property and Easement",
+        "marks": 100
+      },
+      {
+        "code": "K-3005",
+        "name": "Professional Ethics, Accountability & Bar-Bench Relation",
+        "marks": "50+50",
+        "practical": true,
+        "practicalNote": "Theory 50 + Project File 30 + Viva 20"
+      }
+    ]
+  },
+  "4": {
+    "name": "Semester IV",
+    "subjects": [
+      {
+        "code": "K-4001",
+        "name": "Company Law",
+        "marks": 100
+      },
+      {
+        "code": "K-4002",
+        "name": "Labour and Industrial Law",
+        "marks": 100
+      },
+      {
+        "code": "K-4003",
+        "name": "Environmental Law",
+        "marks": 100
+      },
+      {
+        "code": "K-4004",
+        "name": "Criminology and Penology",
+        "marks": 100,
+        "optional": true,
+        "optGroup": "Choose 1"
+      },
+      {
+        "code": "K-4005",
+        "name": "Law of Trust, Equity and Fiduciary Relation",
+        "marks": 100,
+        "optional": true,
+        "optGroup": "Choose 1"
+      },
+      {
+        "code": "K-4006",
+        "name": "Banking Law incl. Negotiable Instruments Act",
+        "marks": 100,
+        "optional": true,
+        "optGroup": "Choose 1"
+      },
+      {
+        "code": "K-4007",
+        "name": "Arbitration, Conciliation & ADR",
+        "marks": "50+50",
+        "practical": true,
+        "practicalNote": "Sessional Diary 40 + Field Work 40 + Viva 20"
+      }
+    ]
+  },
+  "5": {
+    "name": "Semester V",
+    "subjects": [
+      {
+        "code": "K-5001",
+        "name": "Civil Procedure Code & Limitation Act",
+        "marks": 100
+      },
+      {
+        "code": "K-5002",
+        "name": "Law of Crimes – II (CrPC / BNSS, JJ Act & Probation of Offenders Act)",
+        "marks": 100
+      },
+      {
+        "code": "K-5003",
+        "name": "Law of Evidence (BSA 2023)",
+        "marks": 100
+      },
+      {
+        "code": "K-5004",
+        "name": "Land Laws incl. Ceiling & Other Local Laws",
+        "marks": 100
+      },
+      {
+        "code": "K-5005",
+        "name": "Drafting of Pleading & Conveyancing",
+        "marks": "50+50",
+        "practical": true,
+        "practicalNote": "Theory 50 + Pleading exercises 20 + Conveyancing exercises 20 + Viva 10"
+      }
+    ]
+  },
+  "6": {
+    "name": "Semester VI",
+    "subjects": [
+      {
+        "code": "K-6001",
+        "name": "Interpretation of Statutes",
+        "marks": 100
+      },
+      {
+        "code": "K-6002",
+        "name": "Legal Language & Legal Writing incl. General English",
+        "marks": 100
+      },
+      {
+        "code": "K-6003",
+        "name": "Law of Human Rights",
+        "marks": 100
+      },
+      {
+        "code": "K-6004",
+        "name": "Intellectual Property Law",
+        "marks": 100,
+        "optional": true,
+        "optGroup": "Choose 1"
+      },
+      {
+        "code": "K-6005",
+        "name": "Information Technology & Cyber Law",
+        "marks": 100,
+        "optional": true,
+        "optGroup": "Choose 1"
+      },
+      {
+        "code": "K-6006",
+        "name": "Law Relating to Women & Child",
+        "marks": 100,
+        "optional": true,
+        "optGroup": "Choose 1"
+      },
+      {
+        "code": "K-6007",
+        "name": "Law Relating to Right to Information",
+        "marks": 100,
+        "optional": true,
+        "optGroup": "Choose 1"
+      },
+      {
+        "code": "K-6008",
+        "name": "Moot Court, Pre-Trial Preparation & Trial Proceedings",
+        "marks": "50+50",
+        "practical": true,
+        "practicalNote": "Moot Courts 35 + Court Assignments 25 + Interviewing & Pre-Trial 20 + Viva 10 + Sessional Diary 10"
+      }
+    ]
+  }
+}

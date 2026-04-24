@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>{{ pageTitle or "CCSU LLB Previous Year Papers 2016-2025 | AI Exam Prep | Last Minute Law" }}</title>
+<meta name="description" content="{{ pageDescription or site.description }}">
+<meta name="keywords" content="{{ pageKeywords or 'CCSU LLB, CCS University law, LLB previous year papers, CCSU exam prep, Chaudhary Charan Singh University' }}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Last Minute Law">
+<meta property="og:title" content="{{ pageTitle or 'CCSU LLB Exam Prep — AI-Analyzed Previous Year Papers (2016–2025)' }}">
+<meta property="og:description" content="{{ pageDescription or site.description }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ pageTitle or 'Last Minute Law — CCSU LLB Exam Prep' }}">
+<meta name="twitter:description" content="{{ pageDescription or site.description }}">
+{% block schema %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"WebSite","@id":"{{ site.url }}/#website","name":"Last Minute Law","url":"{{ site.url }}/","description":"AI-Analyzed CCSU LLB Exam Preparation","inLanguage":"en-IN"},
+  {"@type":"Organization","@id":"{{ site.url }}/#org","name":"Last Minute Law","url":"{{ site.url }}/"}
+]}
+</script>
+{% endblock %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="mast">
+  <div class="mast-inner wrap">
+    <a href="/" class="brand" aria-label="Last Minute Law home">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7L3 14h4L5 7z"/><path d="M19 7l-2 7h4l-2-7z"/></svg></span>
+      <span class="brand-text">Last Minute Law</span>
+    </a>
+    <nav class="desk-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/syllabus/">Syllabus</a>
+      <a href="/exam-rules/">Exam Rules</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+{{ content | safe }}
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Last Minute Law</div>
+        <p class="footer-about">AI-analyzed CCSU LLB exam preparation. Built by students, for students.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/syllabus/">Syllabus</a></li>
+          <li><a href="/exam-rules/">Exam Rules</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Semester IV Subjects</div>
+        <ul class="footer-links">
+          {%- for slug, subj in subjects %}
+          <li><a href="/{{ slug }}/">{{ subj.name }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Last Minute Law. Not affiliated with CCS University. For educational purposes only.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const SUPABASE_URL = '{{ site.supabaseUrl }}';
+const SUPABASE_KEY = '{{ site.supabaseKey }}';
+</script>
+<script src="/js/app.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>
