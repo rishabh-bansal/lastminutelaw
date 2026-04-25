@@ -1,32 +1,37 @@
 ---
 layout: base.njk
 pageTitle: "CCSU LLB Previous Year Papers 2016-2025 | AI Exam Prep | Last Minute Law"
-pageDescription: "AI-analyzed CCSU LLB previous year question papers (2016-2025). Smart predictions, scoring strategies, syllabus, case laws & exam tips for all 6 semesters. Free for CCS University law students."
+pageDescription: "AI-analyzed CCSU LLB previous year question papers (2016-2025). Smart predictions, scoring strategies, syllabus, case laws & exam tips. Free for CCS University law students."
 ---
-
-<section class="hero">
+<section class="hero" aria-labelledby="hero-heading">
   <div class="wrap">
+    <div class="hero-eyebrow fade-in"><span class="dot"></span><span>Live · 2025–2026 Exam Window</span></div>
+    <h1 id="hero-heading" class="hero-title fade-in d1">Know <em>exactly</em><br>what to study.</h1>
+    <p class="hero-lede fade-in d2">Every CCSU LLB question paper from 2016 to 2025, analysed. Smart predictions, proven scoring strategies, and landmark case laws — indexed for your next exam.</p>
     <div class="hero-split">
-      <div>
-        <div class="hero-kicker fade-in">CCSU LLB · Semester IV · 2016–2025</div>
-        <h1 class="hero-title fade-in d1">Know exactly<br>what to study.</h1>
-        <p class="hero-deck fade-in d2">Every previous year question — analyzed by AI. Probability scores, safe scoring combos, golden case laws — all free, forever.</p>
-        <div class="hero-actions fade-in d2">
-          <a href="#subjects" class="btn-solid">See the Analysis →</a>
+      <div class="fade-in d3">
+        <div class="sem-label"><span>Browse by Semester</span><span class="sem-label-hint">Tap to switch</span></div>
+        <div class="sem-row" role="tablist" aria-label="Semester selector">
+          {%- for i in [1,2,3,4,5,6] %}
+          <a href="{% if i == 4 %}#subjects{% else %}#sem-{{ i }}{% endif %}" class="sem-btn {% if i == 4 %}active{% endif %}" role="tab">
+            {% if i == 4 %}<span class="sem-btn-live">Live</span>{% endif %}
+            <span class="sem-btn-num">{{ ['I','II','III','IV','V','VI'][i-1] }}</span>
+            <span class="sem-btn-sub">Sem {{ i }}</span>
+          </a>
+          {%- endfor %}
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SUBJECTS — Static HTML for SEO -->
-<section id="subjects">
+<section id="subjects" aria-labelledby="subjects-heading">
   <header class="section-head">
     <div class="wrap">
       <div class="section-head-inner">
         <div>
           <div class="section-kicker">Semester IV</div>
-          <h2 class="section-title">The Papers, Decoded.</h2>
+          <h2 id="subjects-heading" class="section-title">The Papers, Decoded.</h2>
         </div>
         <p class="section-deck">AI-Analyzed Question Bank · {{ subjects | length }} subjects</p>
       </div>
@@ -34,109 +39,77 @@ pageDescription: "AI-analyzed CCSU LLB previous year question papers (2016-2025)
   </header>
   <div class="wrap">
     <div class="subject-grid">
-      {%- for slug, s in subjects %}
+      {%- set subjectKeys = subjects | dictsort %}
+      {%- for slug, s in subjectKeys %}
       <a href="/{{ slug }}/" class="subject-card">
-        <div class="sc-top">
-          <span class="sc-code mono">{{ s.code }}</span>
-          <div class="sc-badges">
-            {%- if s.optional %}<span class="chip">Optional</span>{%- endif %}
-            {%- if s.practical %}<span class="chip chip--green">Practical</span>{%- endif %}
-          </div>
-        </div>
+        <div class="sc-top"><span class="sc-num">{{ loop.index | padStart(2, '0') }}</span><span class="sc-code">{{ s.code }}</span></div>
         <h3 class="sc-name">{{ s.name }}</h3>
-        <p class="sc-desc">{{ s.oneLiner }}</p>
-        <div class="sc-pills">
-          <span class="sc-pill">{{ s.difficulty }}</span>
-          <span class="sc-pill">{{ s.style }}</span>
+        <p class="sc-deck">{{ s.oneLiner }}</p>
+        <div class="sc-meta">
+          <span class="chip {% if s.difficulty == 'Easy' %}chip--green{% elif s.difficulty == 'Hard' %}chip--red{% else %}chip--amber{% endif %}">{{ s.difficulty or 'Medium' }}</span>
+          <span class="chip chip--plain">{{ s.style }}</span>
+          {%- if s.optional %}<span class="chip chip--navy">Optional</span>{%- endif %}
+          {%- if s.practical %}<span class="chip">Theory + Practical</span>{%- endif %}
         </div>
-        <div class="sc-footer">
-          <span></span>
-          <span class="sc-footer-right">Read <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
-        </div>
+        {%- if s.years | length > 0 %}
+        <div class="sc-years">{%- for y in s.years %}<span class="sc-year">{{ y }}</span>{%- endfor %}</div>
+        {%- endif %}
+        <div class="sc-footer"><span></span><span class="sc-footer-right">Read <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></div>
       </a>
       {%- endfor %}
     </div>
   </div>
 </section>
 
-<!-- TIPS — Static SEO content -->
-<section id="tips">
+<section id="tips" aria-labelledby="tips-heading">
   <header class="section-head">
     <div class="wrap">
       <div class="section-head-inner">
         <div>
           <div class="section-kicker">Playbook</div>
-          <h2 class="section-title">Tips &amp; Guidelines</h2>
+          <h2 id="tips-heading" class="section-title">Tips &amp; Guidelines</h2>
         </div>
       </div>
     </div>
   </header>
   <div class="wrap">
     <div class="tips-grid">
+      {%- set tips = [
+        {num:"01",title:"Section C First",text:"Start your paper with Section C (3×20 = 60 marks). These long answers carry the most weight. Pick the 3 you know best and write comprehensive answers with case laws, sections, and headings."},
+        {num:"02",title:"Passing Marks Strategy",text:"You need 36/100 to pass. Section A alone is 20 marks. Get Section A right + answer 1 Section C properly (20 marks) = 40 marks. That's your safety net even on a bad day."},
+        {num:"03",title:"Case Laws Win Marks",text:"Citing relevant case laws in Section C bumps your answer from average to excellent. You don't need to remember full citations — just the case name, year, and the principle established."},
+        {num:"04",title:"Repeat Topics = Free Marks",text:"Some topics repeat in 80-100% of papers. These are your guaranteed questions. Master the top 5 priorities in each subject and you'll recognise at least 3 Section C questions."},
+        {num:"05",title:"Word Limits Matter",text:"Section A: 50-75 words max. Section B: 150-200 words. Section C: 400-500 words minimum. Examiners check length — a short Section C answer will not get full marks regardless of quality."},
+        {num:"06",title:"Time Management",text:"3-hour paper. Spend: Section C = 90 min (30 min each), Section B = 40 min (20 min each), Section A = 30 min (6 min each), Review = 10 min. Never leave Section C incomplete."}
+      ] %}
+      {%- for t in tips %}
       <div class="tip-card">
-        <div class="tip-num mono">01</div>
-        <h3 class="tip-title">Section C First</h3>
-        <p>Start your paper with Section C (3×20 = 60 marks). These long answers carry the most weight. Pick the 3 you know best and write comprehensive answers with case laws, sections, and headings.</p>
+        <div class="tip-num mono">{{ t.num }}</div>
+        <h3 class="tip-title">{{ t.title }}</h3>
+        <p>{{ t.text }}</p>
       </div>
-      <div class="tip-card">
-        <div class="tip-num mono">02</div>
-        <h3 class="tip-title">Passing Marks Strategy</h3>
-        <p>You need 36/100 to pass. Section A alone is 20 marks. Get Section A right + answer 1 Section C properly (20 marks) = 40 marks. That's your safety net even on a bad day.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num mono">03</div>
-        <h3 class="tip-title">Case Laws Win Marks</h3>
-        <p>Citing relevant case laws in Section C bumps your answer from average to excellent. You don't need to remember full citations — just the case name, year, and the principle established.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num mono">04</div>
-        <h3 class="tip-title">Repeat Topics = Free Marks</h3>
-        <p>Some topics repeat in 80-100% of papers. These are your guaranteed questions. Master the top 5 priorities in each subject and you'll recognise at least 3 Section C questions.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num mono">05</div>
-        <h3 class="tip-title">Word Limits Matter</h3>
-        <p>Section A: 50-75 words max. Section B: 150-200 words. Section C: 400-500 words minimum. Examiners check length — a short Section C answer will not get full marks regardless of quality.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num mono">06</div>
-        <h3 class="tip-title">Time Management</h3>
-        <p>3-hour paper. Spend: Section C = 90 min (30 min each), Section B = 40 min (20 min each), Section A = 30 min (6 min each), Review = 10 min. Never leave Section C incomplete.</p>
-      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>
 
-<!-- FAQ — Schema.org FAQPage for rich snippets -->
-<section id="faq">
+<section id="faq" aria-labelledby="faq-heading">
   <header class="section-head">
     <div class="wrap">
       <div class="section-head-inner">
         <div>
           <div class="section-kicker">Common Questions</div>
-          <h2 class="section-title">FAQ</h2>
+          <h2 id="faq-heading" class="section-title">FAQ</h2>
         </div>
       </div>
     </div>
   </header>
   <div class="wrap">
     <div class="faq-list">
-      <details class="faq-item">
-        <summary><h3>What is the passing mark for CCSU LLB?</h3></summary>
-        <p>36 out of 100 (36%) per paper is required to pass each CCSU LLB subject. Total 500 marks per semester across 5 papers.</p>
-      </details>
-      <details class="faq-item">
-        <summary><h3>Can I fail papers and still pass CCSU LLB semester?</h3></summary>
-        <p>Yes. If you fail 1 or 2 papers, you are promoted to the next semester and must clear them as back papers. Failing 3 or more papers results in semester back — you must repeat the whole semester.</p>
-      </details>
-      <details class="faq-item">
-        <summary><h3>What is the CCSU LLB exam pattern?</h3></summary>
-        <p>Each 3-hour paper has 100 marks split as: Section A (5 compulsory × 4 marks = 20), Section B (2 of 3 × 10 marks = 20), Section C (3 of 5 × 20 marks = 60).</p>
-      </details>
-      <details class="faq-item">
-        <summary><h3>Which optional subject should I choose in CCSU LLB Semester 4?</h3></summary>
-        <p>Banking Law (K-4006) is most commonly offered and easier for definition-based scoring. Criminology (K-4004) is best for essay writers. Law of Trust (K-4005) is rarely offered at most colleges.</p>
-      </details>
+      <details class="faq-item"><summary><h3>What is the passing mark for CCSU LLB?</h3></summary><p>36 out of 100 (36%) per paper is required to pass each CCSU LLB subject. Total 500 marks per semester across 5 papers.</p></details>
+      <details class="faq-item"><summary><h3>Can I fail papers and still pass CCSU LLB semester?</h3></summary><p>Yes. If you fail 1 or 2 papers, you are promoted to the next semester and must clear them as back papers. Failing 3 or more papers results in semester back.</p></details>
+      <details class="faq-item"><summary><h3>What is the CCSU LLB exam pattern?</h3></summary><p>Each 3-hour paper has 100 marks: Section A (5 × 4 = 20), Section B (2 of 3 × 10 = 20), Section C (3 of 5 × 20 = 60).</p></details>
+      <details class="faq-item"><summary><h3>Which optional subject should I choose in Semester 4?</h3></summary><p>Banking Law (K-4006) is most commonly offered and easiest for rote scoring. Criminology (K-4004) suits essay writers. Law of Trust (K-4005) is rarely offered.</p></details>
     </div>
   </div>
 </section>
@@ -144,13 +117,11 @@ pageDescription: "AI-analyzed CCSU LLB previous year question papers (2016-2025)
 {% block schema %}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-  {"@type":"WebSite","@id":"{{ site.url }}/#website","name":"Last Minute Law","url":"{{ site.url }}/","description":"AI-Analyzed CCSU LLB Exam Preparation","inLanguage":"en-IN"},
-  {"@type":"Organization","@id":"{{ site.url }}/#org","name":"Last Minute Law","url":"{{ site.url }}/"},
+  {"@type":"WebSite","@id":"{{ site.url }}/#website","name":"Last Minute Law","url":"{{ site.url }}/"},
   {"@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"What is the passing mark for CCSU LLB?","acceptedAnswer":{"@type":"Answer","text":"36 out of 100 (36%) per paper is required to pass each CCSU LLB subject."}},
-    {"@type":"Question","name":"Can I fail papers and still pass CCSU LLB semester?","acceptedAnswer":{"@type":"Answer","text":"Yes. If you fail 1 or 2 papers, you are promoted to the next semester. Failing 3+ results in semester back."}},
-    {"@type":"Question","name":"What is the CCSU LLB exam pattern?","acceptedAnswer":{"@type":"Answer","text":"Section A: 5×4=20, Section B: 2×10=20, Section C: 3×20=60. Total 100 marks, 3 hours."}},
-    {"@type":"Question","name":"Which optional subject for CCSU LLB Sem 4?","acceptedAnswer":{"@type":"Answer","text":"Banking Law (K-4006) is easiest for rote scoring. Criminology (K-4004) suits essay writers."}}
+    {"@type":"Question","name":"What is the passing mark for CCSU LLB?","acceptedAnswer":{"@type":"Answer","text":"36 out of 100 (36%) per paper."}},
+    {"@type":"Question","name":"What is the CCSU LLB exam pattern?","acceptedAnswer":{"@type":"Answer","text":"Section A: 5×4=20, Section B: 2×10=20, Section C: 3×20=60. Total 100 marks."}},
+    {"@type":"Question","name":"Which optional subject for Sem 4?","acceptedAnswer":{"@type":"Answer","text":"Banking Law (K-4006) is easiest. Criminology (K-4004) suits essay writers."}}
   ]}
 ]}
 </script>

@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>{{ pageTitle or "CCSU LLB Previous Year Papers 2016-2025 | AI Exam Prep | Last Minute Law" }}</title>
 <meta name="description" content="{{ pageDescription or site.description }}">
-<meta name="keywords" content="{{ pageKeywords or 'CCSU LLB, CCS University law, LLB previous year papers, CCSU exam prep, Chaudhary Charan Singh University' }}">
+<meta name="keywords" content="{{ pageKeywords or 'CCSU LLB, CCS University law, LLB previous year papers, CCSU exam prep' }}">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Last Minute Law">
-<meta property="og:title" content="{{ pageTitle or 'CCSU LLB Exam Prep — AI-Analyzed Previous Year Papers (2016–2025)' }}">
+<meta property="og:title" content="{{ pageTitle or 'CCSU LLB Exam Prep' }}">
 <meta property="og:description" content="{{ pageDescription or site.description }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ pageTitle or 'Last Minute Law — CCSU LLB Exam Prep' }}">
+<meta name="twitter:title" content="{{ pageTitle or 'Last Minute Law' }}">
 <meta name="twitter:description" content="{{ pageDescription or site.description }}">
 {% block schema %}
 <script type="application/ld+json">
@@ -31,45 +31,69 @@
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-
-<!-- HEADER -->
-<header class="mast">
-  <div class="mast-inner wrap">
-    <a href="/" class="brand" aria-label="Last Minute Law home">
-      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7L3 14h4L5 7z"/><path d="M19 7l-2 7h4l-2-7z"/></svg></span>
-      <span class="brand-text">Last Minute Law</span>
-    </a>
-    <nav class="desk-nav" aria-label="Main navigation">
-      <a href="/">Home</a>
-      <a href="/syllabus/">Syllabus</a>
-      <a href="/exam-rules/">Exam Rules</a>
-    </nav>
+<div class="masthead" role="banner">
+  <div class="wrap masthead-inner">
+    <div class="masthead-left">
+      <span>Volume I · Edition 2026</span>
+      <span>CCS University · Meerut</span>
+    </div>
+    <div class="masthead-right"><span id="todayDate"></span></div>
   </div>
-</header>
+</div>
+<nav class="primary" aria-label="Primary">
+  <div class="wrap nav-inner">
+    <a href="/" class="brand">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7L3 14h4L5 7z"/><path d="M19 7l-2 7h4l-2-7z"/></svg></span>
+      <span class="brand-name">The Last Minute <em>Law</em></span>
+    </a>
+    <div class="nav-links" role="menubar">
+      <a href="/#subjects">Subjects</a>
+      <a href="/#tips">Exam Tips</a>
+      <a href="/syllabus/">Syllabus</a>
+      <a href="/exam-rules/">Rules</a>
+    </div>
+    <div class="nav-cta">
+      <a href="/#subjects" class="btn-solid">Submit Paper</a>
+      <button class="nav-menu-btn" onclick="document.getElementById('drawer').classList.toggle('open');document.getElementById('drawerOverlay').classList.toggle('open');" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="drawer-overlay" id="drawerOverlay" onclick="this.classList.remove('open');document.getElementById('drawer').classList.remove('open');"></div>
+<aside class="drawer" id="drawer">
+  <button class="drawer-close" onclick="document.getElementById('drawer').classList.remove('open');document.getElementById('drawerOverlay').classList.remove('open');" aria-label="Close">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg>
+  </button>
+  <a href="/">Home</a>
+  <a href="/#subjects">Subjects</a>
+  <a href="/#tips">Exam Tips</a>
+  <a href="/syllabus/">Full Syllabus</a>
+  <a href="/exam-rules/">Exam Rules</a>
+</aside>
 
 <main>
 {{ content | safe }}
 </main>
 
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand">Last Minute Law</div>
-        <p class="footer-about">AI-analyzed CCSU LLB exam preparation. Built by students, for students.</p>
+        <div class="footer-brand"><span>The Last Minute <em>Law</em></span></div>
+        <p class="footer-tagline">A free, independent exam-prep resource for Chaudhary Charan Singh University LLB students. Built by students, for students.</p>
       </div>
-      <div>
-        <div class="footer-heading">Quick Links</div>
-        <ul class="footer-links">
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/syllabus/">Syllabus</a></li>
           <li><a href="/exam-rules/">Exam Rules</a></li>
         </ul>
       </div>
-      <div>
-        <div class="footer-heading">Semester IV Subjects</div>
-        <ul class="footer-links">
+      <div class="footer-col">
+        <h4>Semester IV</h4>
+        <ul>
           {%- for slug, subj in subjects %}
           <li><a href="/{{ slug }}/">{{ subj.name }}</a></li>
           {%- endfor %}
@@ -77,15 +101,23 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Last Minute Law. Not affiliated with CCS University. For educational purposes only.</p>
+      <span>© 2026 Last Minute Law · All analysis is original &amp; protected.</span>
+      <span>Papers sourced from publicly available materials.</span>
     </div>
   </div>
 </footer>
 
-<script>
-const SUPABASE_URL = '{{ site.supabaseUrl }}';
-const SUPABASE_KEY = '{{ site.supabaseKey }}';
-</script>
+<nav class="mob-nav" aria-label="Mobile quick nav">
+  <div class="mob-nav-inner">
+    <a href="/" class="mob-nav-btn {{ 'active' if page.url == '/' }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg><span>Home</span></a>
+    <a href="/#subjects" class="mob-nav-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 6v13M12 6c-1.5-1-3-1-4.5-1H4v13h3.5c1.5 0 3 0 4.5 1M12 6c1.5-1 3-1 4.5-1H20v13h-3.5c-1.5 0-3 0-4.5 1"/></svg><span>Subjects</span></a>
+    <a href="/#tips" class="mob-nav-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3a6 6 0 016 6c0 2.5-1.5 4-2.5 5.5S14 17 14 19h-4c0-2-.5-3-1.5-4.5S6 11.5 6 9a6 6 0 016-6zM10 22h4"/></svg><span>Tips</span></a>
+    <a href="/syllabus/" class="mob-nav-btn {{ 'active' if '/syllabus' in page.url }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>Syllabus</span></a>
+    <a href="/exam-rules/" class="mob-nav-btn {{ 'active' if '/exam-rules' in page.url }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4M12 3l8 4v5c0 4.5-3.5 8-8 9-4.5-1-8-4.5-8-9V7l8-4z"/></svg><span>Rules</span></a>
+  </div>
+</nav>
+
+<script>(function(){var d=new Date();document.getElementById('todayDate').textContent=d.toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});})();</script>
 <script src="/js/app.js"></script>
 {% block scripts %}{% endblock %}
 </body>
