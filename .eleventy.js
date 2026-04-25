@@ -34,6 +34,7 @@ module.exports = function(eleventyConfig) {
 
   // Helper filters
   eleventyConfig.addFilter("json", (val) => JSON.stringify(val));
+  eleventyConfig.addFilter("padStart", (val, len, char) => String(val).padStart(len || 2, char || '0'));
   eleventyConfig.addFilter("repeat", (str, n) => str.repeat(Math.max(0, n)));
   eleventyConfig.addFilter("min", (a, b) => Math.min(a, b));
   eleventyConfig.addFilter("max", (a, b) => Math.max(a, b));
