@@ -4,60 +4,72 @@ pagination:
   size: 1
   alias: paper
 permalink: "/{{ paper.slug }}/{{ paper.year }}/"
-eleventyComputed:
-  pageTitle: "{{ paper.subject.name }} {{ paper.year }} Question Paper — CCSU LLB {{ paper.subject.code }} | Last Minute Law"
-  pageDescription: "{{ paper.subject.name }} ({{ paper.subject.code }}) {{ paper.year }} CCSU LLB previous year question paper with full questions."
 layout: base.njk
+eleventyComputed:
+  pageTitle: "{{ paper.subject.name }} — {{ paper.year }} Paper | Last Minute Law"
+  pageDescription: "CCSU LLB {{ paper.subject.name }} {{ paper.year }} previous year question paper. Full questions with section-wise breakdown."
 ---
-<div class="detail-hero">
-  <div class="wrap">
-    <div class="breadcrumb">
-      <a href="/">Home</a><span class="breadcrumb-sep">/</span>
-      <a href="/{{ paper.slug }}/">{{ paper.subject.name }}</a><span class="breadcrumb-sep">/</span>
-      <span>{{ paper.year }} Paper</span>
-    </div>
-    <span class="mono" style="color:var(--red);font-size:14px;">{{ paper.code }} · Semester {{ paper.subject.semester }}</span>
-    <h1 class="serif" style="font-size:clamp(28px,4vw,48px);line-height:1.1;margin:8px 0;">{{ paper.subject.name }} — {{ paper.year }}</h1>
-    <p style="font-size:13px;color:var(--ink-60);margin-top:4px;">CCSU LLB Previous Year Question Paper · {{ paper.questions | length }} questions</p>
-  </div>
-</div>
 
-<div class="wrap" style="padding-bottom:60px;">
-  <div class="paper-content">
-    {%- for q in paper.questions %}
-      {%- if q | startsWith('§') %}
-    <div class="paper-section-head">{{ q | replaceAll('§', '') }}</div>
-      {%- elif q | startsWith('*') %}
-    <p class="paper-instruction">{{ q | replaceAll('*', '') }}</p>
-      {%- else %}
-    <div class="paper-question">
-      <span>{{ q }}</span>
+{% block navcta %}<a href="/{{ paper.slug }}/" class="btn-solid">← Back to Analysis</a>{% endblock %}
+
+<!-- BREADCRUMB + PAPER HERO -->
+<section class="detail-hero">
+  <div class="wrap">
+    <div class="breadcrumb fade-in">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="/{{ paper.slug }}/">{{ paper.subject.name }}</a>
+      <span class="breadcrumb-sep">/</span>
+      <span style="color:var(--ink);">{{ paper.year }} Paper</span>
     </div>
+    <div class="fade-in d1">
+      <div class="section-kicker">{{ paper.code }} · Semester IV</div>
+      <h1 class="serif" style="font-size:clamp(32px,5vw,56px); line-height:1.0; letter-spacing:-0.02em; margin-bottom:10px;">{{ paper.subject.name }} — {{ paper.year }}</h1>
+      <p style="font-size:14px; color:var(--ink-60); line-height:1.5;">CCSU LLB Previous Year Question Paper · {{ paper.questions | length }} items · 100 marks · 3 hours</p>
+    </div>
+  </div>
+</section>
+
+<!-- PAPER CONTENT -->
+<div class="narrow">
+  <div class="paper-body fade-in d2">
+    {%- for line in paper.questions %}
+      {%- if line | startsWith('§') %}
+        {%- set sectionName = line | replaceAll('§', '') | trimStr %}
+        <div class="paper-section-head">{{ sectionName }}</div>
+      {%- elif line | startsWith('*') %}
+        <p class="paper-instruction">{{ line | replaceAll('*', '') | trimStr }}</p>
+      {%- elif line | startsWith('   ') %}
+        <div class="paper-question" style="padding-left:28px;">
+          <span class="q-num"></span>
+          <span>{{ line | trimStr }}</span>
+        </div>
+      {%- else %}
+        {%- set dotIdx = line.indexOf('.') %}
+        {%- if dotIdx > 0 and dotIdx < 4 %}
+        <div class="paper-question">
+          <span class="q-num">{{ line.substring(0, dotIdx + 1) }}</span>
+          <span>{{ line.substring(dotIdx + 1) | trimStr }}</span>
+        </div>
+        {%- else %}
+        <p class="paper-instruction">{{ line }}</p>
+        {%- endif %}
       {%- endif %}
     {%- endfor %}
   </div>
-
-  <nav style="margin-top:40px;padding-top:24px;border-top:1px solid var(--rule);">
-    <h3 style="font-size:14px;font-weight:600;margin-bottom:12px;">Other Years — {{ paper.subject.name }}</h3>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;">
-      {%- set paperData = papers[paper.code] %}
-      {%- for year in paperData %}
-      <a href="/{{ paper.slug }}/{{ year }}/" class="chip {% if year == paper.year %}chip--red{% else %}chip--plain{% endif %}" style="text-decoration:none;">{{ year }}</a>
-      {%- endfor %}
-    </div>
-    <p style="margin-top:16px;"><a href="/{{ paper.slug }}/" style="color:var(--red);font-weight:600;">← Back to {{ paper.subject.name }} Analysis</a></p>
-  </nav>
 </div>
 
-{% block schema %}
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LearningResource",
-  "name":"{{ paper.subject.name }} {{ paper.year }} Question Paper",
-  "url":"{{ site.url }}/{{ paper.slug }}/{{ paper.year }}/",
-  "datePublished":"{{ paper.year }}-06-01",
-  "educationalLevel":"LLB Semester {{ paper.subject.semester }}",
-  "learningResourceType":"ExamQuestion",
-  "provider":{"@type":"Organization","name":"Last Minute Law"}
-}
-</script>
-{% endblock %}
+<!-- YEAR NAVIGATION -->
+<div class="wrap">
+  <div class="year-nav">
+    <h3 class="year-nav-title">Other Years — {{ paper.subject.name }}</h3>
+    <div class="year-chips">
+      {%- for y in paper.subject.years | reverse %}
+      <a href="/{{ paper.slug }}/{{ y }}/" class="year-chip {% if y == paper.year %}current{% endif %}">{{ y }}</a>
+      {%- endfor %}
+    </div>
+  </div>
+  <div style="padding-bottom:40px;">
+    <a href="/{{ paper.slug }}/" class="back-link">← Back to {{ paper.subject.name }} Analysis</a>
+  </div>
+</div>

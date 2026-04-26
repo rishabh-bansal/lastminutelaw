@@ -1,170 +1,201 @@
 ---
 pagination:
-  data: subjects
+  data: collections.subjectPages
   size: 1
-  alias: subjectEntry
-  resolve: values
-permalink: "/{{ subjectEntry.id }}/"
-eleventyComputed:
-  pageTitle: "{{ subjectEntry.name }} ({{ subjectEntry.code }}) — CCSU LLB Sem {{ subjectEntry.semester }} PYQ Analysis | Last Minute Law"
-  pageDescription: "AI-analyzed {{ subjectEntry.name }} previous year papers (2016-2025). {{ subjectEntry.priorities | length }} priority topics, golden case laws & scoring strategies for CCSU LLB."
+  alias: subject
+permalink: "/{{ subject.slug }}/"
 layout: base.njk
+eleventyComputed:
+  pageTitle: "{{ subject.name }} — AI Analysis | Last Minute Law"
+  pageDescription: "AI-analyzed CCSU LLB {{ subject.name }} previous year papers. Priority topics, scoring strategies, golden case laws."
 ---
-{%- set s = subjectEntry %}
-{%- set maxRepeats = 1 %}
-{%- for p in s.priorities %}{%- if p.repeats > maxRepeats %}{% set maxRepeats = p.repeats %}{% endif %}{%- endfor %}
 
-<div class="detail-hero">
+{% block navcta %}<a href="/" class="btn-solid">← All Subjects</a>{% endblock %}
+
+<!-- BREADCRUMB + SUBJECT HERO -->
+<section class="detail-hero">
   <div class="wrap">
-    <div class="breadcrumb">
-      <a href="/">Home</a><span class="breadcrumb-sep">/</span>
-      <a href="/#subjects">Semester {{ s.semester }}</a><span class="breadcrumb-sep">/</span>
-      <span>{{ s.name }}</span>
+    <div class="breadcrumb fade-in">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="/">Semester IV</a>
+      <span class="breadcrumb-sep">/</span>
+      <span style="color:var(--ink);">{{ subject.name }}</span>
     </div>
-    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+    <div class="fade-in d1" style="display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap;">
       <div>
-        <h1 class="serif" style="font-size:clamp(32px,5vw,56px);line-height:1.0;letter-spacing:-0.02em;margin-bottom:10px;">{{ s.name }}</h1>
+        <h1 class="serif" style="font-size:clamp(32px,5vw,56px); line-height:1.0; letter-spacing:-0.02em; margin-bottom:10px;">{{ subject.name }}</h1>
         <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12px;color:var(--ink-60);">
-          <span class="mono">{{ s.code }}</span>
+          <span class="mono">{{ subject.code }}</span>
           <span style="color:var(--ink-20);">·</span>
-          <span>{{ s.papersCount }} papers analysed</span>
-          {%- if s.years | length > 0 %}
+          <span>{{ subject.papersCount }} papers analysed</span>
           <span style="color:var(--ink-20);">·</span>
-          <span>{{ s.years | first }}–{{ s.years | last }}</span>
-          {%- endif %}
+          <span>{{ subject.years[0] }}–{{ subject.years[subject.years.length - 1] }}</span>
         </div>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;">
-        <span class="chip {% if s.difficulty == 'Easy' %}chip--green{% elif s.difficulty == 'Hard' %}chip--red{% else %}chip--amber{% endif %}">{{ s.difficulty or 'Medium' }}</span>
-        <span class="chip chip--plain">{{ s.style }}</span>
-        {%- if s.optional %}<span class="chip chip--navy">Optional</span>{%- endif %}
-        {%- if s.practical %}<span class="chip">Theory + Practical</span>{%- endif %}
+      <div class="fade-in d2" style="display:flex;flex-wrap:wrap;gap:6px;">
+        <span class="chip {% if subject.difficulty == 'Easy' %}chip--green{% elif subject.difficulty == 'Hard' %}chip--red{% else %}chip--amber{% endif %}">{{ subject.difficulty }}</span>
+        <span class="chip chip--plain">{{ subject.style }}</span>
+        {% if subject.optional %}<span class="chip chip--navy">Optional</span>{% else %}<span class="chip chip--navy">Compulsory</span>{% endif %}
       </div>
     </div>
-    {%- if s.practicalNote %}<p style="font-size:12px;color:var(--ink-60);font-style:italic;margin-top:10px;">{{ s.practicalNote }}</p>{%- endif %}
   </div>
-</div>
+</section>
 
-<div class="wrap">
-  <div class="detail-layout">
-    <nav class="detail-tabs-static">
-      <a href="#smart-analysis" class="detail-tab-static active"><span class="mono" style="font-size:10px;color:var(--ink-40);margin-right:8px;">01</span>Smart Analysis</a>
-      <a href="#past-papers" class="detail-tab-static"><span class="mono" style="font-size:10px;color:var(--ink-40);margin-right:8px;">02</span>Past Papers</a>
-      <a href="#exam-strategy" class="detail-tab-static"><span class="mono" style="font-size:10px;color:var(--ink-40);margin-right:8px;">03</span>Exam Strategy</a>
-    </nav>
-
-    <div>
-      <!-- SMART ANALYSIS -->
-      <section id="smart-analysis" style="margin-bottom:60px;">
-        <div class="analysis-header">
-          <div>
-            <h2 class="serif" style="font-size:28px;line-height:1.1;letter-spacing:-0.01em;">Ranked by Probability</h2>
-            <p style="font-size:13px;color:var(--ink-60);margin-top:4px;">Topics most likely to appear in your next paper</p>
-          </div>
-        </div>
-        {%- if s.priorities | length > 0 %}
-        <div class="analysis-list">
-          {%- for p in s.priorities | sortByRepeats %}
-          {%- set pct = ((p.repeats / maxRepeats) * 100) | round %}
-          {%- set pred = pct | predictionLabel %}
-          <article class="analysis-item">
-            <div class="ai-rank {% if pred == 'HIGH' %}hi{% endif %}">{{ loop.index | padStart(2, '0') }}</div>
-            <div class="ai-main">
-              <h4 class="ai-topic">{{ p.topic }}</h4>
-              <div class="ai-meta">
-                <span class="chip {% if pred == 'HIGH' %}chip--red{% elif pred == 'MEDIUM' %}chip--amber{% else %}chip--plain{% endif %}">{{ pred }} · {{ pct }}%</span>
-                <span class="chip chip--plain">{{ p.repeats }}/{{ p.total }} papers</span>
-                <span class="chip chip--plain" title="Difficulty">{{ p.difficulty | difficultyDots }}</span>
-                {%- if p.secA > 0 %}<span class="chip chip--plain">A×{{ p.secA }}</span>{%- endif %}
-                {%- if p.secB > 0 %}<span class="chip chip--plain">B×{{ p.secB }}</span>{%- endif %}
-                {%- if p.secC > 0 %}<span class="chip chip--plain">C×{{ p.secC }}</span>{%- endif %}
-              </div>
-              <div class="ai-years mono">{{ p.years }}</div>
-            </div>
-            <div class="ai-detail">
-              <button class="ai-toggle" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true');this.nextElementSibling.classList.toggle('open');">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
-                Read scoring strategy
-              </button>
-              <div class="ai-strategy">
-                <p>{{ p.strategy }}</p>
-                <div class="ai-strategy-min"><strong>Min viable answer</strong><p style="margin-top:2px;">{{ p.minAnswer }}</p></div>
-                {%- if p.overlaps | length %}<p style="margin-top:10px;font-size:11px;color:var(--ink-60);">↗ Overlaps: {{ p.overlaps | join(', ') }}</p>{%- endif %}
-              </div>
-            </div>
-          </article>
-          {%- endfor %}
-        </div>
-        {%- else %}
-        <div style="text-align:center;padding:40px 20px;"><p style="font-family:'Instrument Serif',serif;font-size:22px;">No analysis data yet</p></div>
-        {%- endif %}
-      </section>
-
-      <!-- PAST PAPERS -->
-      {%- set paperData = papers[s.code] %}
-      <section id="past-papers" style="margin-bottom:60px;">
-        <h2 class="serif" style="font-size:28px;line-height:1.1;margin-bottom:16px;">Past Papers</h2>
-        {%- if paperData %}
-        <div class="papers-grid">
-          {%- for year, questions in paperData %}
-          <a href="/{{ s.id }}/{{ year }}/" class="paper-card">
-            <div class="paper-card-year">{{ year }}</div>
-            <div class="paper-card-label">Full Paper</div>
-          </a>
-          {%- endfor %}
-        </div>
-        {%- else %}
-        <p style="color:var(--ink-60);">No papers available yet.</p>
-        {%- endif %}
-      </section>
-
-      <!-- EXAM STRATEGY -->
-      <section id="exam-strategy">
-        {%- if s.goldenCases | length > 0 %}
-        <h2 class="serif" style="font-size:28px;line-height:1.1;margin-bottom:4px;">Golden Case Laws</h2>
-        <p style="font-size:13px;color:var(--ink-60);margin-bottom:20px;">Each case covers 3+ priority topics. Memorise these few → answer most questions.</p>
-        <div class="golden-list">
-          {%- for g in s.goldenCases %}
-          <div class="golden-item">
-            <div class="golden-name">{{ g.name }}</div>
-            <p class="golden-principle">{{ g.principle }}</p>
-            <div class="golden-covers">
-              {%- for c in g.covers %}
-              <span class="chip chip--red">{{ c.topic }}</span>
-              {%- endfor %}
-            </div>
-          </div>
-          {%- endfor %}
-        </div>
-        {%- endif %}
-
-        {%- if s.safeCombos | length > 0 %}
-        <h3 class="serif" style="font-size:22px;margin:40px 0 16px;">Safe Scoring Combinations</h3>
-        <div class="combo-list">
-          {%- for combo in s.safeCombos %}
-          <div class="combo-item">
-            <div class="combo-label">{{ combo.label }}</div>
-            <div class="combo-topics">
-              {%- for t in combo.topics %}<span class="chip chip--plain">{{ t }}</span>{%- endfor %}
-            </div>
-            <div class="combo-score">{{ combo.marks }} marks</div>
-          </div>
-          {%- endfor %}
-        </div>
-        {%- endif %}
-      </section>
+<!-- TAB NAV (sticky scroll-spy) -->
+<div style="border-bottom:1px solid var(--rule); position:sticky; top:60px; background:rgba(245,240,228,0.92); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); z-index:10;">
+  <div class="wrap">
+    <div class="detail-tabs-static">
+      <a href="#smart-analysis" class="detail-tab-static active">
+        <span class="mono" style="font-size:10px;color:var(--ink-40);margin-right:8px;">01</span>Smart Analysis
+      </a>
+      <a href="#past-papers" class="detail-tab-static">
+        <span class="mono" style="font-size:10px;color:var(--ink-40);margin-right:8px;">02</span>Past Papers
+      </a>
+      <a href="#exam-strategy" class="detail-tab-static">
+        <span class="mono" style="font-size:10px;color:var(--ink-40);margin-right:8px;">03</span>Exam Strategy
+      </a>
     </div>
   </div>
 </div>
 
-{% block schema %}
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LearningResource",
-  "name":"{{ s.name }} ({{ s.code }}) — CCSU LLB PYQ Analysis",
-  "url":"{{ site.url }}/{{ s.id }}/",
-  "educationalLevel":"LLB Semester {{ s.semester }}",
-  "inLanguage":"en-IN",
-  "provider":{"@type":"Organization","name":"Last Minute Law","url":"{{ site.url }}"}
-}
+<div class="wrap" style="padding-top:32px; padding-bottom:80px;">
+
+<!-- 01 SMART ANALYSIS -->
+<section id="smart-analysis">
+  <div class="section-divider" style="padding-top:0;">
+    <div class="section-kicker">01 · Smart Analysis</div>
+    <h2 class="section-divider-title">Priority Topics</h2>
+    <p class="section-divider-sub">Topics most likely to appear in your next paper</p>
+  </div>
+
+  <div class="analysis-header" style="margin-top:24px;">
+    <div></div>
+    <select class="sort-select" aria-label="Sort analysis">
+      <option value="repeat">Most Repeated</option>
+      <option value="probability">Highest Probability</option>
+      <option value="easy">Easiest First</option>
+      <option value="hard">Hardest First</option>
+    </select>
+  </div>
+
+  <div class="analysis-list">
+    {%- for p in subject.priorities %}
+    {%- set pct = ((p.repeats / p.total) * 100) | round %}
+    {%- set predClass = 'chip--red' if pct >= 75 else ('chip--amber' if pct >= 50 else 'chip--plain') %}
+    {%- set predLabel = 'HIGH' if pct >= 75 else ('MEDIUM' if pct >= 50 else 'LOW') %}
+    <article class="analysis-item">
+      <div class="ai-rank {% if pct >= 75 %}hi{% endif %}">{{ p.rank | padStart(2, '0') }}</div>
+      <div class="ai-main">
+        <h4 class="ai-topic">{{ p.topic }}</h4>
+        <div class="ai-meta">
+          <span class="chip {{ predClass }}">{{ predLabel }} · {{ pct }}%</span>
+          <span class="chip chip--plain">{{ p.repeats }}/{{ p.total }} papers</span>
+          <span class="chip chip--plain" title="Difficulty">{{ '●' | repeat(p.difficulty | min(5)) }}{{ '○' | repeat(5 - (p.difficulty | min(5))) }}</span>
+          {% if p.secA %}<span class="chip chip--plain">A×{{ p.secA }}</span>{% endif %}
+          {% if p.secB %}<span class="chip chip--plain">B×{{ p.secB }}</span>{% endif %}
+          {% if p.secC %}<span class="chip chip--plain">C×{{ p.secC }}</span>{% endif %}
+        </div>
+        <div class="ai-years mono">{{ p.years }}</div>
+      </div>
+      <div class="ai-detail">
+        <button class="ai-toggle" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true'); this.nextElementSibling.classList.toggle('open');">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg>
+          Read scoring strategy
+        </button>
+        <div class="ai-strategy">
+          <p>{{ p.strategy }}</p>
+          <div class="ai-strategy-min">
+            <strong>Min viable answer</strong>
+            <p style="margin-top:2px;">{{ p.minAnswer }}</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- 02 PAST PAPERS -->
+<section id="past-papers" style="margin-top:20px;">
+  <div class="section-divider">
+    <div class="section-kicker">02 · Past Papers</div>
+    <h2 class="section-divider-title">The Archive</h2>
+    <p class="section-divider-sub">{{ subject.papersCount }} papers · {{ subject.years[0] }}–{{ subject.years[subject.years.length - 1] }}</p>
+  </div>
+  <div class="papers-grid" style="margin-top:24px;">
+    {%- for year in subject.years | reverse %}
+    <a href="/{{ subject.slug }}/{{ year }}/" class="paper-card">
+      <div class="paper-card-year">{{ year }}</div>
+      <div class="paper-card-label">Full Paper</div>
+    </a>
+    {%- endfor %}
+  </div>
+</section>
+
+<!-- 03 EXAM STRATEGY -->
+<section id="exam-strategy" style="margin-top:20px;">
+  <div class="section-divider">
+    <div class="section-kicker">03 · Exam Strategy</div>
+    <h2 class="section-divider-title">Golden Case Laws &amp; Combos</h2>
+  </div>
+
+  {% if subject.goldenCases.length > 0 %}
+  <div class="strategy-section" style="margin-top:24px;">
+    <h3 class="strategy-h">Minimum Cases, Maximum Coverage</h3>
+    <p class="strategy-sub">Each case below covers 3+ priority topics. Memorise these few → answer most questions.</p>
+    <div class="golden-list">
+      {%- for gc in subject.goldenCases %}
+      <div class="golden-item">
+        <div class="golden-name">{{ gc.name }}</div>
+        <p class="golden-principle">{{ gc.principle }}</p>
+        <div class="golden-covers">
+          {%- for c in gc.covers %}
+          <span class="chip chip--red">{{ c.topic }}</span>
+          {%- endfor %}
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if subject.safeCombos.length > 0 %}
+  <div class="strategy-section">
+    <h3 class="strategy-h">Safe Scoring Combinations</h3>
+    <p class="strategy-sub">Pre-planned topic bundles for Section C. Pick 2 combos → cover 60 marks.</p>
+    <div class="combo-list">
+      {%- for combo in subject.safeCombos %}
+      <div class="combo-item">
+        <div class="combo-label">{{ combo.label }}</div>
+        <div class="combo-topics">
+          {%- for t in combo.topics %}
+          <span class="chip chip--plain">{{ t }}</span>
+          {%- endfor %}
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+  {% endif %}
+</section>
+
+</div>
+
+{% block scripts %}
+<script>
+// Scroll-spy for subject tabs
+const sections = ['smart-analysis','past-papers','exam-strategy'];
+const tabs = document.querySelectorAll('.detail-tab-static');
+window.addEventListener('scroll', () => {
+  let current = sections[0];
+  for (const id of sections) {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= 140) current = id;
+  }
+  tabs.forEach(t => {
+    t.classList.toggle('active', t.getAttribute('href') === '#' + current);
+  });
+}, { passive: true });
 </script>
 {% endblock %}
